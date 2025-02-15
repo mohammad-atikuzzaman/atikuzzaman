@@ -19,3 +19,32 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom scrollbar styles */
+.scrollable-nav::-webkit-scrollbar {
+  width: 8px; /* Slim scrollbar */
+}
+
+.scrollable-nav::-webkit-scrollbar-thumb {
+  background-color: #333; /* Dark thumb color */
+  border-radius: 10px;
+}
+
+.scrollable-nav::-webkit-scrollbar-track {
+  background: #1f1f1f; /* Dark track color */
+}
+
+.profile-image {
+  animation: rotate-border 5s linear infinite;
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+    border-color: #800e0e;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-color: #fff;
+  }
+}
