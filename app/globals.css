@@ -34,17 +34,3 @@ body {
   background: #1f1f1f; /* Dark track color */
 }
 
-.profile-image {
-  animation: rotate-border 5s linear infinite;
-}
-
-@keyframes rotate-border {
-  0% {
-    transform: rotate(0deg);
-    border-color: #800e0e;
-  }
-  100% {
-    transform: rotate(360deg);
-    border-color: #fff;
-  }
-}

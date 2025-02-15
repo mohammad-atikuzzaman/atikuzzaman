@@ -1,12 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
-const Hero = () => {
+const Hero: FC = () => {
   return (
     <div
       className="w-full relative flex items-center justify-center bg-cover bg-center min-h-screen"
       style={{
-        backgroundImage:
-          "url('/photos/atikuzzaman.jpg')",
+        backgroundImage: "url('/photos/atikuzzaman.jpg')",
       }}
     >
       <div className="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-start p-6 md:p-12">
