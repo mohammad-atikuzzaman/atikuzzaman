@@ -13,7 +13,7 @@ const Hero: FC = () => {
           Alex Smith
         </h1>
         <p className="text-gray-300 text-xl md:text-2xl mt-4">
-          I'm <span className="text-blue-400">Freelancer</span>
+          Im <span className="text-blue-400">Freelancer</span>
         </p>
       </div>
     </div>
