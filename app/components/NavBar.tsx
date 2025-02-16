@@ -10,8 +10,13 @@ import {
 } from "react-icons/fa6";
 import { orbitron } from "../layout";
 import { FaHome } from "react-icons/fa";
-import { MdOutlinePerson } from "react-icons/md";
+import {
+  MdOutlineContactPhone,
+  MdOutlineMiscellaneousServices,
+  MdOutlinePerson,
+} from "react-icons/md";
 import { IoDocument } from "react-icons/io5";
+import { GoProjectSymlink } from "react-icons/go";
 
 const NavBar: FC = () => {
   return (
@@ -25,37 +30,61 @@ const NavBar: FC = () => {
           height={200}
           className="w-32 h-32 rounded-full border-4 border-gray-700 profile-image"
         />
-        <h2 className={`${orbitron.className} text-2xl font-bold mt-4 uppercase`}>Atikuzzaman</h2>
+        <h2
+          className={`${orbitron.className} text-2xl font-bold mt-4 uppercase`}
+        >
+          Atikuzzaman
+        </h2>
         <div className="flex space-x-2 mt-4">
-          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link
+            href={"#"}
+            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+          >
             <FaLinkedin />
           </Link>
-          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link
+            href={"#"}
+            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+          >
             <FaGithub />
           </Link>
-          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link
+            href={"#"}
+            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+          >
             <FaFacebook />
           </Link>
-          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link
+            href={"#"}
+            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+          >
             <FaWhatsapp />
           </Link>
-          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link
+            href={"#"}
+            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+          >
             <FaTwitter />
           </Link>
         </div>
       </section>
       <menu className="mt-8 space-y-4 w-full block text-left overflow-auto scrollable-nav">
-        {[{path:"Home", icon: <FaHome/>}, {path:"About", icon: <MdOutlinePerson/>}, {path:"Resume", icons: <IoDocument/>}, "Portfolio", "Services", "Contact"].map(
-          (item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="block py-2 px-4 hover:bg-gray-800 rounded"
-            >
-              {item}
-            </a>
-          )
-        )}
+        {[
+          { path: "Home", icon: <FaHome /> },
+          { path: "About", icon: <MdOutlinePerson /> },
+          { path: "Resume", icons: <IoDocument /> },
+          { path: "Portfolio", icon: <GoProjectSymlink /> },
+          { path: "Services", icons: <MdOutlineMiscellaneousServices /> },
+          { path: "Contact", icon: <MdOutlineContactPhone /> },
+        ].map((item) => (
+          <a
+            key={item?.path}
+            href={`#${item?.path.toLowerCase()}`}
+            className="block py-2 px-4 hover:bg-gray-800 rounded"
+          >
+            {item?.path}
+          </a>
+        ))}
       </menu>
     </nav>
   );
