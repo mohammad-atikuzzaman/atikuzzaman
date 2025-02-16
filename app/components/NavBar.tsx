@@ -19,15 +19,15 @@ export const orbitron = Orbitron({ subsets: ["latin"] });
 
 const NavBar: FC = () => {
   return (
-    <nav className="w-full md:w-[30%] bg-gray-900 text-white flex flex-col items-center sticky top-0 h-auto md:h-screen">
+    <nav className="w-full md:w-[30%] bg-[#040B14] text-white flex flex-col items-center sticky top-0 h-auto md:h-screen">
       <section className="p-6 flex flex-col items-center justify-center">
         <Image
-          src="/photos/profile.jpg"
+          src="/photos/profile.png"
           alt="Atikuzzaman profile photo"
           title="Atikuzzaman profile photo"
           width={200}
           height={200}
-          className="w-32 h-32 rounded-full border-4 border-gray-700 profile-image"
+          className="w-28 rounded-full border-8 border-gray-700 profile-image"
         />
         <h2
           className={`${orbitron.className} text-2xl font-bold mt-4 uppercase`}
@@ -37,37 +37,37 @@ const NavBar: FC = () => {
         <div className="flex space-x-2 mt-4">
           <Link
             href={"#"}
-            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+            className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
           >
             <FaLinkedin />
           </Link>
           <Link
             href={"#"}
-            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+            className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
           >
             <FaGithub />
           </Link>
           <Link
             href={"#"}
-            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+            className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
           >
             <FaFacebook />
           </Link>
           <Link
             href={"#"}
-            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+            className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
           >
             <FaWhatsapp />
           </Link>
           <Link
             href={"#"}
-            className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
+            className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500"
           >
             <FaTwitter />
           </Link>
         </div>
       </section>
-      <menu className="mt-8 space-y-4 w-full block overflow-auto scrollable-nav">
+      <menu className="mt-8 space-y-4 w-full block overflow-auto scrollable-nav ml-4 text-md">
         {[
           { path: "Home", icon: <FaHome /> },
           { path: "About", icon: <MdOutlinePerson /> },
