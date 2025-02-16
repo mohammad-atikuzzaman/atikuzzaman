@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { FC } from "react";
 import {
   FaFacebook,
@@ -22,11 +23,21 @@ const NavBar: FC = () => {
         />
         <h1 className="text-2xl font-bold mt-4">Alex Smith</h1>
         <div className="flex space-x-4 mt-4">
-          <FaLinkedin />
-          <FaGithub />
-          <FaFacebook />
-          <FaWhatsapp />
-          <FaTwitter />
+          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+            <FaLinkedin />
+          </Link>
+          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+            <FaGithub />
+          </Link>
+          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+            <FaFacebook />
+          </Link>
+          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+            <FaWhatsapp />
+          </Link>
+          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+            <FaTwitter />
+          </Link>
         </div>
       </section>
       <menu className="mt-8 space-y-4 w-full block text-left overflow-auto scrollable-nav">
