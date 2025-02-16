@@ -19,7 +19,7 @@ export const orbitron = Orbitron({ subsets: ["latin"] });
 
 const NavBar: FC = () => {
   return (
-    <nav className="w-full md:w-[30%] bg-[#040B14] text-white flex flex-col items-center sticky top-0 h-auto md:h-screen">
+    <nav className="w-full md:w-[25%] md:max-w-[250px] bg-[#040B14] text-white flex flex-col items-center sticky top-0 h-auto md:h-screen">
       <section className="p-6 flex flex-col items-center justify-center">
         <Image
           src="/photos/profile.png"
@@ -79,7 +79,7 @@ const NavBar: FC = () => {
           <a
             key={item?.path}
             href={`#${item?.path.toLowerCase()}`}
-            className="flex items-center gap-3 py-2 px-4 hover:bg-gray-800 rounded"
+            className="flex items-center gap-3 py-2 px-4 hover:text-sky-300 rounded "
           >
             {item?.icon}
             {item?.path}
