@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Orbitron } from "next/font/google";
+import TypeWriterEffect from "./TypeWriterEffect";
 export const orbitron = Orbitron({ subsets: ["latin"] });
 
 const Hero: FC = () => {
@@ -17,7 +18,7 @@ const Hero: FC = () => {
           Md Atikuzaman
         </h1>
         <p className="text-gray-300 text-xl md:text-2xl mt-4">
-          Im <span className="text-blue-400">Freelancer</span>
+          Im <TypeWriterEffect/>
         </p>
       </div>
     </div>

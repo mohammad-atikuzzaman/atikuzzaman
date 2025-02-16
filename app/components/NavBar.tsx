@@ -27,7 +27,7 @@ const NavBar: FC = () => {
           title="Atikuzzaman profile photo"
           width={200}
           height={200}
-          className="w-28 rounded-full border-8 border-gray-700 profile-image"
+          className="w-28 rounded-full border-8 border-gray-700 profile-image hover:border-sky-500 hover:border-opacity-60"
         />
         <h2
           className={`${orbitron.className} text-2xl font-bold mt-4 uppercase`}
