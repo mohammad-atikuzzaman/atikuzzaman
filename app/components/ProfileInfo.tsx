@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFillHddStackFill } from "react-icons/bs";
-import { FaArrowRight, FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { FaGraduationCap, FaTreeCity } from "react-icons/fa6";
 import { GrStatusGood } from "react-icons/gr";
 import { IoIosCalendar } from "react-icons/io";
