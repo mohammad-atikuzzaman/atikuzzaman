@@ -21,21 +21,21 @@ const NavBar: FC = () => {
           height={400}
           className="w-24 h-24 rounded-full border-4 border-gray-700 profile-image"
         />
-        <h1 className="text-2xl font-bold mt-4">Alex Smith</h1>
-        <div className="flex space-x-4 mt-4">
-          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+        <h1 className="text-2xl font-bold mt-4">ATIKUZZAMAN</h1>
+        <div className="flex space-x-2 mt-4">
+          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
             <FaLinkedin />
           </Link>
-          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
             <FaGithub />
           </Link>
-          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
             <FaFacebook />
           </Link>
-          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
             <FaWhatsapp />
           </Link>
-          <Link href={"#"} className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
+          <Link href={"#"} className="bg-gray-700 p-2 rounded-full bg-opacity-90 hover:bg-sky-500">
             <FaTwitter />
           </Link>
         </div>

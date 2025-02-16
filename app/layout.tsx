@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "./components/NavBar";
+import { Teko } from 'next/font/google'
+
+
+export const teko = Teko({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Atikuzzaman",
@@ -15,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex`}
+        className={`${teko.className} flex`}
       > <NavBar/>
         {children}
       </body>
