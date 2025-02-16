@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Title from "./reusableComponents/Title";
 import Image from "next/image";
+import ProfileInfo from "./ProfileInfo";
 
 const About: FC = () => {
   return (
@@ -32,9 +33,7 @@ const About: FC = () => {
           />
         </div>
 
-        <section>
-          <h3 className="text-2xl font-semibold">MERN Stack Web Developer</h3>
-        </section>
+        <ProfileInfo/>
       </div>
     </div>
   );
