@@ -10,7 +10,7 @@ const Hero: FC = () => {
     >
       <div className="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-start p-6 md:p-12">
         <h1 className="text-white text-4xl md:text-5xl font-bold">
-          Alex Smith
+          Mohammad Atikuzaman
         </h1>
         <p className="text-gray-300 text-xl md:text-2xl mt-4">
           Im <span className="text-blue-400">Freelancer</span>
