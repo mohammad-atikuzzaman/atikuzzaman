@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { orbitron } from "../layout";
+import { Orbitron } from "next/font/google";
+export const orbitron = Orbitron({ subsets: ["latin"] });
 
 const Hero: FC = () => {
   return (
@@ -9,7 +10,9 @@ const Hero: FC = () => {
         backgroundImage: "url('/photos/atikuzzaman.png')",
       }}
     >
-      <div className={`${orbitron.className} bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-start p-6 md:p-12`}>
+      <div
+        className={`${orbitron.className} bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-start p-6 md:p-12`}
+      >
         <h1 className="text-white text-4xl md:text-5xl font-bold">
           Md Atikuzaman
         </h1>

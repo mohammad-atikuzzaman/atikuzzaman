@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "./components/NavBar";
-import { Orbitron, Roboto } from "next/font/google";
 
-export const orbitron = Orbitron({ subsets: ["latin"] });
-export const roboto = Roboto({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Atikuzzaman",
@@ -22,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} flex`}>
+      <body className={`flex`}>
         <NavBar />
         {children}
       </body>

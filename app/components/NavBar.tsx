@@ -2,21 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
 import {
+  FaBarsProgress,
   FaFacebook,
   FaGithub,
   FaLinkedin,
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa6";
-import { orbitron } from "../layout";
 import { FaHome } from "react-icons/fa";
-import {
-  MdOutlineContactPhone,
-  MdOutlineMiscellaneousServices,
-  MdOutlinePerson,
-} from "react-icons/md";
+import { MdOutlineContactPhone, MdOutlinePerson } from "react-icons/md";
 import { IoDocument } from "react-icons/io5";
 import { GoProjectSymlink } from "react-icons/go";
+
+import { Orbitron } from "next/font/google";
+export const orbitron = Orbitron({ subsets: ["latin"] });
 
 const NavBar: FC = () => {
   return (
@@ -68,20 +67,21 @@ const NavBar: FC = () => {
           </Link>
         </div>
       </section>
-      <menu className="mt-8 space-y-4 w-full block text-left overflow-auto scrollable-nav">
+      <menu className="mt-8 space-y-4 w-full block overflow-auto scrollable-nav">
         {[
           { path: "Home", icon: <FaHome /> },
           { path: "About", icon: <MdOutlinePerson /> },
-          { path: "Resume", icons: <IoDocument /> },
+          { path: "Resume", icon: <IoDocument /> },
           { path: "Portfolio", icon: <GoProjectSymlink /> },
-          { path: "Services", icons: <MdOutlineMiscellaneousServices /> },
+          { path: "Services", icon: <FaBarsProgress /> },
           { path: "Contact", icon: <MdOutlineContactPhone /> },
         ].map((item) => (
           <a
             key={item?.path}
             href={`#${item?.path.toLowerCase()}`}
-            className="block py-2 px-4 hover:bg-gray-800 rounded"
+            className="flex items-center gap-3 py-2 px-4 hover:bg-gray-800 rounded"
           >
+            {item?.icon}
             {item?.path}
           </a>
         ))}
