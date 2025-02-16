@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "./components/NavBar";
-import { Teko } from 'next/font/google'
+import { Orbitron, Roboto } from "next/font/google";
 
-
-export const teko = Teko({ subsets: ['latin'] })
+export const orbitron = Orbitron({ subsets: ["latin"] });
+export const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Atikuzzaman",
-  description: "An Aspiring Front-End Developer || Mern-Stack Developer || Full Stack Developer",
+  description:
+    "An Aspiring Front-End Developer || Mern-Stack Developer || Full Stack Developer",
 };
 
 export default function RootLayout({
@@ -18,9 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${teko.className} flex`}
-      > <NavBar/>
+      <body className={`${roboto.className} flex`}>
+        <NavBar />
         {children}
       </body>
     </html>
