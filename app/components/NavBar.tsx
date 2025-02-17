@@ -19,7 +19,7 @@ export const orbitron = Orbitron({ subsets: ["latin"] });
 
 const NavBar: FC = () => {
   return (
-    <nav className="w-full md:w-[25%] md:max-w-[250px] bg-[#040B14] text-white flex flex-col items-center sticky top-0 h-auto md:h-screen">
+    <nav className="w-full md:w-[25%] md:max-w-[250px] bg-[#040B14] md:border-r border-sky-900 text-white flex flex-col items-center sticky top-0 h-auto md:h-screen">
       <section className="p-6 flex flex-col items-center justify-center">
         <Image
           src="/photos/profile.png"
@@ -27,7 +27,7 @@ const NavBar: FC = () => {
           title="Atikuzzaman profile photo"
           width={200}
           height={200}
-          className="w-28 rounded-full border-8 border-gray-700 profile-image hover:border-sky-500 hover:border-opacity-60"
+          className="w-28 rounded-full border-8 border-gray-700 profile-image hover:border-sky-500 hover:border-opacity-90"
         />
         <h2
           className={`${orbitron.className} text-2xl font-bold mt-4 uppercase`}

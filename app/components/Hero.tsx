@@ -12,7 +12,7 @@ const Hero: FC = () => {
       }}
     >
       <div
-        className={`${orbitron.className} bg-sky-900 bg-opacity-20 w-full min-h-screen flex flex-col justify-center items-start p-6 md:p-12`}
+        className={`${orbitron.className} bg-black bg-opacity-30 w-full min-h-screen flex flex-col justify-center items-start p-6 md:p-12`}
       >
         <h1 className="text-white text-4xl md:text-5xl font-bold">
           Md Atikuzaman
