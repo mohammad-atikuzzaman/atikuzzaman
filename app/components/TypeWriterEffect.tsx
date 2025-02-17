@@ -15,9 +15,9 @@ const TypeWriterEffect: FC = () => {
         loop={0}
         cursor
         cursorStyle=" |"
-        typeSpeed={50}
+        typeSpeed={70}
         deleteSpeed={50}
-        delaySpeed={1000}
+        delaySpeed={1500}
       />
     </span>
   );

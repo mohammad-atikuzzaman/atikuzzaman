@@ -14,12 +14,16 @@ import { MdOutlineContactPhone, MdOutlinePerson } from "react-icons/md";
 import { IoDocument } from "react-icons/io5";
 import { GoProjectSymlink } from "react-icons/go";
 
-import { Orbitron } from "next/font/google";
+import { Orbitron, Poppins } from "next/font/google";
 export const orbitron = Orbitron({ subsets: ["latin"] });
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 const NavBar: FC = () => {
   return (
-    <nav className="w-full md:w-[25%] md:max-w-[250px] bg-[#040B14] md:border-r border-sky-900 text-white flex flex-col items-center sticky top-0 h-auto md:h-screen">
+    <nav className="w-full md:w-[25%] md:max-w-[250px] bg-[#040B14] text-white flex flex-col items-center sticky top-0 h-auto md:h-screen">
       <section className="p-6 flex flex-col items-center justify-center">
         <Image
           src="/photos/profile.png"
@@ -67,7 +71,7 @@ const NavBar: FC = () => {
           </Link>
         </div>
       </section>
-      <menu className="mt-8 space-y-4 w-full block overflow-auto scrollable-nav ml-4 text-md">
+      <menu className="mt-8 space-y-4 w-full block overflow-auto scrollable-nav ml-4">
         {[
           { path: "Home", icon: <FaHome /> },
           { path: "About", icon: <MdOutlinePerson /> },
@@ -79,7 +83,7 @@ const NavBar: FC = () => {
           <a
             key={item?.path}
             href={`#${item?.path.toLowerCase()}`}
-            className="flex items-center gap-3 py-2 px-4 hover:text-sky-300 rounded "
+            className={`${poppins.className} flex font-light items-center gap-3 py-2 px-4 hover:text-sky-300 rounded `}
           >
             {item?.icon}
             {item?.path}
