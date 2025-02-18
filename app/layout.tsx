@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Atikuzzaman",
   description:
     "An Aspiring Front-End Developer || Mern-Stack Developer || Full Stack Developer",
-    icons: "/icons/profile.png"
+  icons: "/icons/profile.png",
 };
 
 export default function RootLayout({
