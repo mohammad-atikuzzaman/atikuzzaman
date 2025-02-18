@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { FC } from "react";
 import {
   FaBarsProgress,
+  // FaBlog,
   FaFacebook,
   FaGithub,
   FaLinkedin,
@@ -11,10 +12,10 @@ import {
 } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineContactPhone, MdOutlinePerson } from "react-icons/md";
-import { IoDocument } from "react-icons/io5";
 import { GoProjectSymlink } from "react-icons/go";
 
 import { Orbitron, Poppins } from "next/font/google";
+import { GiSkills } from "react-icons/gi";
 export const orbitron = Orbitron({ subsets: ["latin"] });
 export const poppins = Poppins({
   subsets: ["latin"],
@@ -73,20 +74,21 @@ const NavBar: FC = () => {
       </section>
       <menu className="mt-8 space-y-4 w-full block overflow-auto scrollable-nav ml-4">
         {[
-          { path: "Home", icon: <FaHome /> },
-          { path: "About", icon: <MdOutlinePerson /> },
-          { path: "Resume", icon: <IoDocument /> },
-          { path: "Portfolio", icon: <GoProjectSymlink /> },
-          { path: "Services", icon: <FaBarsProgress /> },
-          { path: "Contact", icon: <MdOutlineContactPhone /> },
+          { nav: "Home",  path:"/", icon: <FaHome /> },
+          { nav: "About",  path:"#about",icon: <MdOutlinePerson /> },
+          { nav: "Skills", path:"#skills", icon: <GiSkills /> },
+          { nav: "Projects",  path:"#projects",icon: <GoProjectSymlink /> },
+          { nav: "Services", path:"#services", icon: <FaBarsProgress /> },
+          { nav: "Contact", path:"#contact", icon: <MdOutlineContactPhone /> },
+          // { nav: "Blog", path:"/blog", icon: <FaBlog /> },
         ].map((item) => (
           <a
             key={item?.path}
-            href={`#${item?.path.toLowerCase()}`}
+            href={`${item?.path}`}
             className={`${poppins.className} flex font-light items-center gap-3 py-2 px-4 hover:text-sky-300 rounded `}
           >
             {item?.icon}
-            {item?.path}
+            {item?.nav}
           </a>
         ))}
       </menu>

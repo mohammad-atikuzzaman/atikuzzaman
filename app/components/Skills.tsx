@@ -1,86 +1,105 @@
-"use client";
-import { useEffect, useRef, useState, FC, ReactNode } from "react";
-import { FaCss3, FaGitAlt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa6";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiExpress, SiMongodb, SiMongoose, SiSocketdotio, SiTypescript } from "react-icons/si";
+import { BiLogoJavascript } from "react-icons/bi";
+import {
+  FaBootstrap,
+  FaCss3,
+  FaHtml5,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import {
+  SiExpress,
+  SiMongodb,
+  SiNextdotjs,
+  SiSocketdotio,
+  SiTypescript,
+} from "react-icons/si";
+import "./skillsStyle.css";
 import Title from "./reusableComponents/Title";
-import { RiFireFill } from "react-icons/ri";
 
-interface Skill {
-  name: ReactNode;
-  percentage: number;
-  title: string
-}
-
-const Skills: FC = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const skillsRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const currentRef = skillsRef.current;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
-
-  const skills: Skill[] = [
-    { name: <FaHtml5 />, percentage: 95, title:"HTML" },
-    { name: <FaCss3 />, percentage: 90, title:"CSS" },
-    { name: <IoLogoJavascript />, percentage: 85, title:"JavaScript" },
-    { name: <SiTypescript />, percentage: 80, title:"TypeScript" },
-    { name: <FaReact />, percentage: 85, title:"React JS" },
-    { name: <FaNodeJs />, percentage: 75, title:"Node JS" },
-    { name: <SiExpress />, percentage: 80, title:"Express JS" },
-    { name: <SiMongodb />, percentage: 80, title:"MongoDB" },
-    { name: <SiMongoose />, percentage: 80, title:"Mongoose" },
-    { name: <FaGitAlt />, percentage: 90, title:"Git" },
-    { name: <RiFireFill />, percentage: 75, title:"Firebase" },
-    { name: <SiSocketdotio />, percentage: 80 , title:"Socket IO"},
-  ];
-
+const Skills = () => {
   return (
-    <section id="skills" className="py-12 mt-12 px-4 bg-sky-50" ref={skillsRef}>
-      <Title title="Skills" />
-      <div className="container mx-auto mt-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {skills.map((skill, index) => (
-            <div title={skill.title} key={index} className="bg-white p-4 rounded-lg shadow-lg">
-              <section className="flex items-center justify-between mb-2">
-                <h3 className="text-xl font-semibold">{skill.name}</h3>
-                <span className="text-sm text-gray-600 mt-2 block">
-                  {skill.percentage}%
-                </span>
-              </section>
-              <div className="w-full bg-gray-200 rounded-full h-2.5">
-                <div
-                  className="bg-blue-500 h-2.5 rounded-full"
-                  style={{
-                    width: isVisible ? `${skill.percentage}%` : "0%",
-                    transition: "width 1.5s ease-in-out",
-                  }}
-                ></div>
-              </div>
+    <section id="skills" className="mt-12 bg-sky-50">
+      <div className="px-4 py-12 max-w-screen-xl mx-auto space-y-8">
+        <Title title="Skills" />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16">
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-[#ff6344] ">
+            <FaHtml5 className="text-xl md:text-5xl  animate-bounce"></FaHtml5>
+            <div>
+              <h4 className="font-semibold md:text-4xl">HTML</h4>
             </div>
-          ))}
+          </div>
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-blue-600  ">
+            <FaCss3 className="text-xl md:text-5xl animate-bounce"></FaCss3>
+            <div>
+              <h4 className="font-semibold md:text-4xl">CSS</h4>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-blue-400">
+            <RiTailwindCssFill className="text-2xl md:text-5xl  animate-bounce"></RiTailwindCssFill>
+            <div>
+              <h4 className="font-semibold md:text-4xl">Tailwind CSS</h4>
+            </div>
+          </div>
+          <div className="flex flex-col  items-center justify-center  text-[#1e4a83] hover:text-violet-700">
+            <FaBootstrap className="text-xl md:text-5xl  anmstretching"></FaBootstrap>
+            <div>
+              <h4 className="font-semibold md:text-4xl">BootStrap</h4>
+            </div>
+          </div>
+          <div className="flex flex-col  items-center justify-center  text-[#1e4a83] hover:text-yellow-500">
+            <BiLogoJavascript className="text-2xl md:text-5xl  animate-bounce"></BiLogoJavascript>
+            <div>
+              <h4 className="font-semibold md:text-4xl">JavaScript</h4>
+            </div>
+          </div>
+          <div className="flex flex-col  items-center justify-center text-[#1e4a83] hover:text-blue-700">
+            <SiTypescript className="text-2xl md:text-5xl shake"></SiTypescript>
+            <div>
+              <h4 className="font-semibold md:text-4xl">TypeScript</h4>
+            </div>
+          </div>
+
+          <div className="flex flex-col  items-center justify-center text-[#1e4a83] hover:text-blue-400">
+            <FaReact className="text-xl md:text-5xl  anm"></FaReact>
+            <div>
+              <h4 className="font-semibold md:text-4xl">React JS</h4>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-black ">
+            <SiNextdotjs className="text-xl md:text-5xl  animate-bounce bg-white rounded-full"></SiNextdotjs>
+            <div>
+              <h4 className="font-semibold md:text-4xl  ">
+                Next JS
+              </h4>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-green-600">
+            <FaNodeJs className="text-xl md:text-5xl  animate-bounce"></FaNodeJs>
+            <div>
+              <h4 className="font-semibold md:text-4xl">Node JS</h4>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-black">
+            <SiExpress className="text-xl md:text-5xl  animate-bounce"></SiExpress>
+            <div>
+              <h4 className="font-semibold md:text-4xl">Express JS</h4>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-green-700">
+            <SiMongodb className="text-xl md:text-5xl  animate-bounce"></SiMongodb>
+            <div>
+              <h4 className="font-semibold md:text-4xl">MongoDB</h4>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-black">
+            <SiSocketdotio className="text-xl md:text-5xl animate-pulse"></SiSocketdotio>
+            <div>
+              <h4 className="font-semibold md:text-4xl">Socket.IO</h4>
+            </div>
+          </div>
         </div>
       </div>
     </section>
