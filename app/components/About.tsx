@@ -22,7 +22,7 @@ const About: FC = () => {
         quality work and maintaining excellent communication.
       </p>
       <div className="flex flex-col md:flex-row items-stretch gap-6">
-        <div className="relative w-full md:w-[40%] bg-gradient-to-r from-sky-500 to-blue-900 p-1 rounded-md">
+        <div className="relative w-full md:w-[30%] bg-gradient-to-r from-sky-500 to-blue-900 p-1 rounded-md">
           <Image
             src="/photos/profile.png"
             alt="Profile"

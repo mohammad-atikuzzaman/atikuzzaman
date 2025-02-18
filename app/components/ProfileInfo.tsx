@@ -1,9 +1,10 @@
 import React from "react";
 import { BsFillHddStackFill } from "react-icons/bs";
 import { FaPhoneAlt } from "react-icons/fa";
-import { FaGraduationCap, FaTreeCity } from "react-icons/fa6";
+import { FaDiscourse, FaGraduationCap, FaTreeCity } from "react-icons/fa6";
 import { GrStatusGood } from "react-icons/gr";
 import { IoIosCalendar } from "react-icons/io";
+import { IoLanguage } from "react-icons/io5";
 import { LuUniversity } from "react-icons/lu";
 import { MdOutlineAttachEmail } from "react-icons/md";
 
@@ -46,6 +47,12 @@ const ProfileInfo = () => {
         </p>
         <p className="flex items-center gap-2">
           <GrStatusGood className="text-blue-500" /> <b>Freelance:</b> Available
+        </p>
+        <p className="flex items-center gap-2">
+          <FaDiscourse className="text-blue-500" /> <b>Courses:</b> Programming Hero
+        </p>
+        <p className="flex items-center gap-2">
+          <IoLanguage className="text-blue-500" /> <b>Language:</b> Bangla, English
         </p>
       </div>
       <p className="mt-6 text-gray-700">
