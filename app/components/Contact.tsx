@@ -97,13 +97,13 @@ const Contact = () => {
             </div>
           </div>
           <br />
-          <hr className="bg-[#16A34A] border-[#186133]" />
+          <hr className="bg-slate-800 border-slate-800" />
           <div>
             <h2 className="font-semibold text-2xl my-3">Send me Mail</h2>
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="space-y-3 text-[#16A34A]"
+              className="space-y-3 text-sky-900"
             >
               <InputField
                 label="Your Name"
@@ -125,7 +125,7 @@ const Contact = () => {
               <input
                 type="submit"
                 value="Send"
-                className=" bg-[#125025] w-full font-bold border-b-[#35cc62] border-b-[3px] hover:bg-green-700 transition-all"
+                className=" bg-sky-900 text-white w-full font-bold border-b-sky-700 border-b-[3px] hover:bg-sky-950 transition-all"
               />
             </form>
           </div>
@@ -150,11 +150,11 @@ const ContactInfo = ({ icon, label, value, link }: ContactInfoProps) => (
     <div>
       <p>{label}</p>
       {link ? (
-        <a href={link} className="font-semibold">
+        <a href={link} className="text-sm">
           {value}
         </a>
       ) : (
-        <h4 className="font-semibold">{value}</h4>
+        <h4 className="">{value}</h4>
       )}
     </div>
   </div>
@@ -175,7 +175,7 @@ const InputField = ({ label, name, type, placeholder }: InputFieldProps) => (
       type={type}
       name={name}
       placeholder={placeholder}
-      className="w-full p-2 font-semibold rounded-md"
+      className="w-full p-2 font-semibold rounded-md border-2 border-sky-900"
       required
     />
   </div>
@@ -194,7 +194,7 @@ const TextareaField = ({ label, name, placeholder }: TextareaFieldProps) => (
     <textarea
       name={name}
       placeholder={placeholder}
-      className="w-full p-2 font-semibold rounded-md"
+      className="w-full p-2 font-semibold rounded-md border-2 border-sky-900"
       required
     ></textarea>
   </div>
