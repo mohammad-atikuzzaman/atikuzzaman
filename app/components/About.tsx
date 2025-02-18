@@ -5,7 +5,7 @@ import ProfileInfo from "./ProfileInfo";
 
 const About: FC = () => {
   return (
-    <div className="mt-12 ml-4 space-y-6">
+    <div className="mt-12 space-y-6 px-4 max-w-screen-xl mx-auto">
       <Title title="About" />
       <p className="text-lg leading-5 font-light">
         Im a Front End Web developer who is passionate about making{" "}
