@@ -54,6 +54,18 @@ const Contact = () => {
       <div className="px-4 py-12 rounded-xl md:flex justify-between gap-8 w-full">
         <div className="mb-4 md:w-[30%]">
           <Title title="Contact" />
+          <div id="map">
+            {/* <iframe
+              title="Google Map"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src={`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Pabna,Bangladesh`}
+            ></iframe> */}
+          </div>
         </div>
         <div className="md:w-[70%]">
           <div>
