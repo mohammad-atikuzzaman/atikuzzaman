@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
 import {
-  FaBarsProgress,
-  // FaBlog,
+  // FaBarsProgress,
+  FaBlog,
   FaFacebook,
   FaGithub,
   FaLinkedin,
@@ -78,9 +78,9 @@ const NavBar: FC = () => {
           { nav: "About",  path:"#about",icon: <MdOutlinePerson /> },
           { nav: "Skills", path:"#skills", icon: <GiSkills /> },
           { nav: "Projects",  path:"#projects",icon: <GoProjectSymlink /> },
-          { nav: "Services", path:"#services", icon: <FaBarsProgress /> },
+          // { nav: "Services", path:"#services", icon: <FaBarsProgress /> },
           { nav: "Contact", path:"#contact", icon: <MdOutlineContactPhone /> },
-          // { nav: "Blog", path:"/blog", icon: <FaBlog /> },
+          { nav: "Blog", path:"/blog", icon: <FaBlog /> },
         ].map((item) => (
           <a
             key={item?.path}

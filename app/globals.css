@@ -34,3 +34,6 @@ body {
   background: #1f1f1f; /* Dark track color */
 }
 
+.py-20.flex.items-center.justify-center {
+  padding: 2rem 0;
+}
