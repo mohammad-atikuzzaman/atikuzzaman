@@ -7,7 +7,7 @@ const Projects: FC = () => {
     <section id="projects" className="max-w-screen-xl mx-auto mt-12 px-4">
       <Title title="Projects" />
       <p className="mt-8">The Projects Thats I have completed</p>
-      <div className="grid md:grid-cols-2 pt-12 ">
+      <div className="grid md:grid-cols-2  gap-4 pt-12 ">
         <ThreeDCardDemo
           title="ChatVibe"
           description="a video conferencing app"
