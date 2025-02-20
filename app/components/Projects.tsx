@@ -16,18 +16,18 @@ const Projects: FC = () => {
           github="https://github.com/mohammad-atikuzzaman/-chatvibe"
         />
         <ThreeDCardDemo
-          title="ChatVibe"
-          description="a video conferencing app"
-          url="https://chat-vibe-ashy.vercel.app/"
-          img="/photos/chatvibe.png"
-          github="https://github.com/mohammad-atikuzzaman/-chatvibe"
+          title="Mega Newss"
+          description="Article sharing platform"
+          url="https://meganewsss.web.app/"
+          img="/photos/megaNewss.png"
+          github="https://github.com/mohammad-atikuzzaman/mega-news"
         />
         <ThreeDCardDemo
           title="ChatVibe"
           description="a video conferencing app"
-          url="https://chat-vibe-ashy.vercel.app/"
-          img="/photos/chatvibe.png"
-          github="https://github.com/mohammad-atikuzzaman/-chatvibe"
+          url="https://vibe-palace.web.app/"
+          img="/photos/vibePalace.png"
+          github="https://github.com/mohammad-atikuzzaman/vibePalace"
         />
       </div>
     </section>
