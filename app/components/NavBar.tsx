@@ -15,8 +15,8 @@ import { MdOutlineContactPhone, MdOutlinePerson } from "react-icons/md";
 import { GoProjectSymlink } from "react-icons/go";
 import { Orbitron, Poppins } from "next/font/google";
 import { GiSkills } from "react-icons/gi";
-import { BsFillMenuButtonWideFill } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
+import { RiMenu2Fill } from "react-icons/ri";
 
 export const orbitron = Orbitron({ subsets: ["latin"] });
 export const poppins = Poppins({
@@ -48,7 +48,9 @@ const NavBar: FC = () => {
             height={200}
             className="w-28 h-28 rounded-full border-8 border-gray-700 hover:border-sky-500 transition"
           />
-          <h2 className={`${orbitron.className} text-2xl font-bold mt-4 uppercase`}>
+          <h2
+            className={`${orbitron.className} text-2xl font-bold mt-4 uppercase`}
+          >
             Atikuzzaman
           </h2>
           <div className="flex space-x-2 mt-4">
@@ -75,7 +77,11 @@ const NavBar: FC = () => {
             { nav: "About", path: "#about", icon: <MdOutlinePerson /> },
             { nav: "Skills", path: "#skills", icon: <GiSkills /> },
             { nav: "Projects", path: "#projects", icon: <GoProjectSymlink /> },
-            { nav: "Contact", path: "#contact", icon: <MdOutlineContactPhone /> },
+            {
+              nav: "Contact",
+              path: "#contact",
+              icon: <MdOutlineContactPhone />,
+            },
             { nav: "Blog", path: "/blog", icon: <FaBlog /> },
           ].map((item) => (
             <a
@@ -91,16 +97,16 @@ const NavBar: FC = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="lg:hidden flex items-center justify-between bg-[#040B14] bg-opacity-90 shadow-md px-4 py-3 fixed top-0 w-full z-50">
+      <nav className="lg:hidden flex items-center justify-between bg-[#040B14] bg-opacity-90 shadow shadow-sky-400 px-4 py-3 fixed top-0 w-full z-50">
         <Image
           src="/photos/profile.png"
-          className="w-11 h-11 rounded-full border border-white"
+          className="w-11 h-11 rounded-full border-2 border-white shadow"
           alt="Atikuzzaman profile"
           width={40}
           height={40}
         />
         <button onClick={() => setIsMobileMenuOpen(true)}>
-          <BsFillMenuButtonWideFill className="text-3xl text-sky-100" />
+          <RiMenu2Fill className="text-3xl text-sky-100" />
         </button>
       </nav>
 
@@ -122,7 +128,9 @@ const NavBar: FC = () => {
                 height={150}
                 className="w-24 h-24 rounded-full border-4 border-gray-700"
               />
-              <h2 className={`${orbitron.className} text-xl font-bold mt-4 uppercase`}>
+              <h2
+                className={`${orbitron.className} text-xl font-bold mt-4 uppercase`}
+              >
                 Atikuzzaman
               </h2>
               <div className="flex space-x-2 mt-4">
@@ -149,8 +157,16 @@ const NavBar: FC = () => {
                 { nav: "Home", path: "/", icon: <FaHome /> },
                 { nav: "About", path: "#about", icon: <MdOutlinePerson /> },
                 { nav: "Skills", path: "#skills", icon: <GiSkills /> },
-                { nav: "Projects", path: "#projects", icon: <GoProjectSymlink /> },
-                { nav: "Contact", path: "#contact", icon: <MdOutlineContactPhone /> },
+                {
+                  nav: "Projects",
+                  path: "#projects",
+                  icon: <GoProjectSymlink />,
+                },
+                {
+                  nav: "Contact",
+                  path: "#contact",
+                  icon: <MdOutlineContactPhone />,
+                },
                 { nav: "Blog", path: "/blog", icon: <FaBlog /> },
               ].map((item) => (
                 <a
