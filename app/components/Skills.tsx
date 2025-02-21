@@ -67,7 +67,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-black ">
-            <SiNextdotjs className="text-xl md:text-3xl  animate-bounce bg-white rounded-full"></SiNextdotjs>
+            <SiNextdotjs className="text-xl md:text-3xl  nextst bg-white rounded-full"></SiNextdotjs>
             <div>
               <h4 className="font-semibold md:text-3xl  ">Next JS</h4>
             </div>

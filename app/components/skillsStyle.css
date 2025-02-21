@@ -1,42 +1,76 @@
 @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  .anm {
-    animation: spin 4s linear infinite;
+}
+.anm {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes stretch {
+  0%,
+  100% {
+    transform: scale(1, 1);
   }
-  
-  @keyframes stretch {
-    0%,
-    100% {
-      transform: scale(1, 1);
-    }
-    50% {
-      transform: scale(1.5, 0.7);
-    }
+  50% {
+    transform: scale(1.5, 0.7);
   }
-  
-  .anmstretching {
-    animation: stretch 2s infinite ease-in-out;
+}
+
+.anmstretching {
+  animation: stretch 2s infinite ease-in-out;
+}
+
+.shake {
+  animation: shake 1.8s infinite ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0) rotate(0deg);
   }
-  
-  
-  
-  .shake {
-    animation: shake 1.5s infinite ease-in-out;
+  10% {
+    transform: translateX(-5px) rotate(-5deg);
   }
-  
-  @keyframes shake {
-    0% { transform: translateX(0) rotate(0deg); }
-    10% { transform: translateX(-5px) rotate(-5deg); }
-    20% { transform: translateX(5px) rotate(5deg); }
-    30% { transform: translateX(-5px) rotate(-5deg); }
-    40% { transform: translateX(5px) rotate(5deg); }
-    50% { transform: translateX(-5px) rotate(-5deg); }
-    60% { transform: translateX(5px) rotate(5deg); }
-    70% { transform: translateX(-5px) rotate(-5deg); }
-    80% { transform: translateX(5px) rotate(5deg); }
-    90% { transform: translateX(-5px) rotate(-5deg); }
-    100% { transform: translateX(0) rotate(0deg); }
+  20% {
+    transform: translateX(5px) rotate(5deg);
   }
+  30% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  40% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  50% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  60% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  70% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  80% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  90% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+.nextst {
+  animation: colr 5s infinite ease;
+}
+
+@keyframes colr {
+  0% {
+    background: #fff;
+  }
+
+  100% {
+   background: #504f4f;
+  }
+}
