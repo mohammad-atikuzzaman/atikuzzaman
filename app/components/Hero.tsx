@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Orbitron } from "next/font/google";
 import TypeWriterEffect from "./TypeWriterEffect";
+import Link from "next/link";
 export const orbitron = Orbitron({ subsets: ["latin"] });
 
 const Hero: FC = () => {
@@ -20,6 +21,7 @@ const Hero: FC = () => {
         <p className="text-gray-300 text-xl md:text-2xl mt-4">
           Im <TypeWriterEffect />
         </p>
+        <Link className="inline-block px-4 mt-4 bg-sky-500 md:text-lg lg:text-xl text-white rounded-sm" href="/Full_stack_developer_Atikuzzaman's_resume.pdf" target="_blank">Resume</Link>
       </div>
     </div>
   );
