@@ -78,6 +78,7 @@ const NavBar: FC = () => {
             {social.map((item, index) => (
               <Link
                 key={index}
+                target="_blank"
                 href={item.href}
                 className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500 transition"
               >
@@ -142,6 +143,7 @@ const NavBar: FC = () => {
                   <Link
                     key={index}
                     href={item.href}
+                    target="_blank"
                     className="bg-gray-800 p-2 rounded-full bg-opacity-90 hover:bg-sky-500 transition"
                   >
                     {item.icon}
