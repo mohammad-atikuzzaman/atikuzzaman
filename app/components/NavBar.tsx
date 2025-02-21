@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { FC, useState, useEffect } from "react";
 import {
-  FaBlog,
   FaFacebook,
   FaGithub,
   FaLinkedin,
@@ -42,7 +41,6 @@ const menus = [
     path: "#contact",
     icon: <MdOutlineContactPhone />,
   },
-  { nav: "Blog", path: "/blog", icon: <FaBlog /> },
 ]
 
 const NavBar: FC = () => {
