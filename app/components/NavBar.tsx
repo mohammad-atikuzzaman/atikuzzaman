@@ -24,6 +24,27 @@ export const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+const social = [
+  { href: "https://www.linkedin.com/in/matikuzzaman/", icon: <FaLinkedin /> },
+  { href: "https://github.com/mohammad-atikuzzaman", icon: <FaGithub /> },
+  { href: "https://www.facebook.com/mohammadakash20", icon: <FaFacebook /> },
+  { href: "https://wa.me/+8801729414662", icon: <FaWhatsapp /> },
+  { href: "https://www.fiverr.com/fbad_campaign", icon: <TbBrandFiverr /> },
+];
+
+const menus = [
+  { nav: "Home", path: "/", icon: <FaHome /> },
+  { nav: "About", path: "#about", icon: <MdOutlinePerson /> },
+  { nav: "Skills", path: "#skills", icon: <GiSkills /> },
+  { nav: "Projects", path: "#projects", icon: <GoProjectSymlink /> },
+  {
+    nav: "Contact",
+    path: "#contact",
+    icon: <MdOutlineContactPhone />,
+  },
+  { nav: "Blog", path: "/blog", icon: <FaBlog /> },
+]
+
 const NavBar: FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -54,13 +75,7 @@ const NavBar: FC = () => {
             Atikuzzaman
           </h2>
           <div className="flex space-x-2 mt-4">
-            {[
-              { href: "https://www.linkedin.com/in/matikuzzaman/", icon: <FaLinkedin /> },
-              { href: "https://github.com/mohammad-atikuzzaman", icon: <FaGithub /> },
-              { href: "https://www.facebook.com/mohammadakash20", icon: <FaFacebook /> },
-              { href: "https://wa.me/+8801729414662", icon: <FaWhatsapp /> },
-              { href: "https://www.fiverr.com/fbad_campaign", icon: <TbBrandFiverr /> },
-            ].map((item, index) => (
+            {social.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
@@ -72,18 +87,7 @@ const NavBar: FC = () => {
           </div>
         </section>
         <menu className="mt-8 space-y-4 w-full overflow-auto px-4">
-          {[
-            { nav: "Home", path: "/", icon: <FaHome /> },
-            { nav: "About", path: "#about", icon: <MdOutlinePerson /> },
-            { nav: "Skills", path: "#skills", icon: <GiSkills /> },
-            { nav: "Projects", path: "#projects", icon: <GoProjectSymlink /> },
-            {
-              nav: "Contact",
-              path: "#contact",
-              icon: <MdOutlineContactPhone />,
-            },
-            { nav: "Blog", path: "/blog", icon: <FaBlog /> },
-          ].map((item) => (
+          {menus.map((item) => (
             <a
               key={item.path}
               href={item.path}
@@ -134,13 +138,7 @@ const NavBar: FC = () => {
                 Atikuzzaman
               </h2>
               <div className="flex space-x-2 mt-4">
-                {[
-                  { href: "#", icon: <FaLinkedin /> },
-                  { href: "#", icon: <FaGithub /> },
-                  { href: "#", icon: <FaFacebook /> },
-                  { href: "#", icon: <FaWhatsapp /> },
-                  { href: "#", icon: <FaTwitter /> },
-                ].map((item, index) => (
+                {social.map((item, index) => (
                   <Link
                     key={index}
                     href={item.href}
@@ -153,22 +151,7 @@ const NavBar: FC = () => {
             </section>
 
             <menu className="mt-8 space-y-4">
-              {[
-                { nav: "Home", path: "/", icon: <FaHome /> },
-                { nav: "About", path: "#about", icon: <MdOutlinePerson /> },
-                { nav: "Skills", path: "#skills", icon: <GiSkills /> },
-                {
-                  nav: "Projects",
-                  path: "#projects",
-                  icon: <GoProjectSymlink />,
-                },
-                {
-                  nav: "Contact",
-                  path: "#contact",
-                  icon: <MdOutlineContactPhone />,
-                },
-                { nav: "Blog", path: "/blog", icon: <FaBlog /> },
-              ].map((item) => (
+              {menus.map((item) => (
                 <a
                   key={item.path}
                   href={item.path}
