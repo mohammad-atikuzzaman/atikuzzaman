@@ -7,7 +7,6 @@ import {
   FaFacebook,
   FaGithub,
   FaLinkedin,
-  FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
@@ -17,6 +16,7 @@ import { Orbitron, Poppins } from "next/font/google";
 import { GiSkills } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { RiMenu2Fill } from "react-icons/ri";
+import { TbBrandFiverr } from "react-icons/tb";
 
 export const orbitron = Orbitron({ subsets: ["latin"] });
 export const poppins = Poppins({
@@ -55,11 +55,11 @@ const NavBar: FC = () => {
           </h2>
           <div className="flex space-x-2 mt-4">
             {[
-              { href: "#", icon: <FaLinkedin /> },
-              { href: "#", icon: <FaGithub /> },
-              { href: "#", icon: <FaFacebook /> },
-              { href: "#", icon: <FaWhatsapp /> },
-              { href: "#", icon: <FaTwitter /> },
+              { href: "https://www.linkedin.com/in/matikuzzaman/", icon: <FaLinkedin /> },
+              { href: "https://github.com/mohammad-atikuzzaman", icon: <FaGithub /> },
+              { href: "https://www.facebook.com/mohammadakash20", icon: <FaFacebook /> },
+              { href: "https://wa.me/+8801729414662", icon: <FaWhatsapp /> },
+              { href: "https://www.fiverr.com/fbad_campaign", icon: <TbBrandFiverr /> },
             ].map((item, index) => (
               <Link
                 key={index}
