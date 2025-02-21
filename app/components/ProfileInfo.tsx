@@ -46,7 +46,7 @@ const ProfileInfo = () => {
           Bangladesh
         </p>
         <p className="flex items-center gap-2">
-          <GrStatusGood className="text-blue-500" /> <b>Freelance:</b> Available
+          <GrStatusGood className="text-blue-500" /> <b>Availability:</b> Open for work
         </p>
         <p className="flex items-center gap-2">
           <FaDiscourse className="text-blue-500" /> <b>Courses:</b> Programming Hero
