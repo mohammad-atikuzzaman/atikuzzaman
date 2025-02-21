@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { BsFillHddStackFill } from "react-icons/bs";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -31,7 +32,7 @@ const ProfileInfo = () => {
           University Bangladesh
         </p>
         <p className="flex items-center gap-2">
-          <FaGraduationCap className="text-blue-500" /> <b>Studay:</b> BBA{" "}
+          <FaGraduationCap className="text-blue-500" /> <b>Study:</b> BBA{" "}
           {"(management)"}
         </p>
         <p className="flex items-center gap-2">
@@ -49,7 +50,7 @@ const ProfileInfo = () => {
           <GrStatusGood className="text-blue-500" /> <b>Availability:</b> Open for work
         </p>
         <p className="flex items-center gap-2">
-          <FaDiscourse className="text-blue-500" /> <b>Courses:</b> Programming Hero
+          <FaDiscourse className="text-blue-500" /> <b>Courses:</b> <Link title="certificate of atikuzzaman" href="https://drive.google.com/file/d/1gCsI95gnRjqzbiHbSD3hgW3-CbiupbmT/view?usp=drive_link">Complete Web Development</Link>
         </p>
         <p className="flex items-center gap-2">
           <IoLanguage className="text-blue-500" /> <b>Language:</b> Bangla, English
