@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar, { poppins } from "./components/NavBar";
+import NavBar from "./components/NavBar";
 
 export const metadata: Metadata = {
   title:
@@ -107,7 +107,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
 
-      <body className={`${poppins.className} flex flex-col lg:flex-row`}>
+      <body className={`flex flex-col lg:flex-row`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
