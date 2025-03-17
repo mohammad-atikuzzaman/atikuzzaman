@@ -94,7 +94,7 @@ export default function RootLayout({
       "AWS",
       "Docker",
     ],
-    image: "https://atikuzzaman.vercel.app/images/profile.jpg",
+    image: "https://atikuzzaman.vercel.app/photos/profile.png",
     description:
       "Professional MERN Stack Developer with 3+ years of experience in web application development",
   };
