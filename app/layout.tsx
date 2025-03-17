@@ -19,19 +19,19 @@ export const metadata: Metadata = {
   ],
   robots: "index, follow, max-image-preview:large",
   icons: {
-    icon: "/icons/profile.png",
-    apple: "/icons/apple-touch-icon.png",
+    icon: "/icons/favicon.png",
+    apple: "/icons/favicon.png",
   },
   openGraph: {
     type: "website",
-    url: "https://atikuzzaman.dev",
+    url: "https://atikuzzaman.vercel.app",
     title: "Atikuzzaman - Professional MERN Stack Developer",
     description:
       "Full Stack Web Developer specializing in modern JavaScript technologies",
     siteName: "Atikuzzaman Portfolio",
     images: [
       {
-        url: "https://atikuzzaman.dev/og-image.jpg",
+        url: "https://atikuzzaman.vercel.app/photos/atikuzzaman.png",
         width: 1200,
         height: 630,
         alt: "Atikuzzaman Portfolio Preview",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Atikuzzaman - MERN Stack Developer",
     description:
       "Building modern web applications with cutting-edge technologies",
-    images: ["https://atikuzzaman.vercel.app/atikuzzaman.jpg"],
+    images: ["https://atikuzzaman.vercel.app/photos/atikuzzaman.png"],
   },
   alternates: {
     canonical: "https://atikuzzaman.vercel.app",
@@ -68,7 +68,12 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Atikuzzaman",
-    jobTitle: ["MERN Stack Developer", "Full Stack Developer", "Frontend Developer","React Developer"],
+    jobTitle: [
+      "MERN Stack Developer",
+      "Full Stack Developer",
+      "Frontend Developer",
+      "React Developer",
+    ],
     url: "https://atikuzzaman.vercel.app",
     sameAs: [
       "https://github.com/mohammad-atikuzzaman",
@@ -89,7 +94,7 @@ export default function RootLayout({
       "AWS",
       "Docker",
     ],
-    image: "https://atikuzzaman.dev/images/profile.jpg",
+    image: "https://atikuzzaman.vercel.app/images/profile.jpg",
     description:
       "Professional MERN Stack Developer with 3+ years of experience in web application development",
   };
