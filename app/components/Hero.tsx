@@ -21,7 +21,13 @@ const Hero: FC = () => {
         <p className="text-gray-300 text-xl md:text-2xl mt-4">
           Im <TypeWriterEffect />
         </p>
-        <Link className="inline-block px-4 mt-4 bg-sky-500 md:text-lg lg:text-xl text-white rounded-sm" href="/Full_stack_developer_Atikuzzaman's_resume.pdf" target="_blank">Resume</Link>
+        <Link
+          className="inline-block px-4 mt-4 bg-sky-500 md:text-lg lg:text-xl text-white rounded-sm"
+          href="/Full-Stack-Developer-Atikuzzaman-Resume.pdf"
+          target="_blank"
+        >
+          Resume
+        </Link>
       </div>
     </div>
   );
