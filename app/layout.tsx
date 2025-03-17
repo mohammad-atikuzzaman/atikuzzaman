@@ -3,51 +3,60 @@ import "./globals.css";
 import NavBar, { poppins } from "./components/NavBar";
 
 export const metadata: Metadata = {
-  title: "Mohammad Atikuzzaman | MERN Stack Web Developer",
+  title:
+    "Atikuzzaman | MERN Stack Developer | Full Stack Engineer | React & Node.js Expert",
   description:
-    "I'm a passionate MERN Stack Web Developer specializing in React.js, Next.js, Node.js, and MongoDB. I build fast, responsive, and scalable web applications.",
+    "Professional MERN Stack Developer with expertise in React.js, Node.js, Express.js, and MongoDB. Building high-performance web applications with modern technologies.",
   keywords: [
     "MERN Stack Developer",
     "Full Stack Developer",
-    "Front-End Developer",
-    "Next.js",
-    "React.js",
-    "JavaScript",
-    "MongoDB",
-    "Web Development",
+    "React Developer",
+    "Node.js Developer",
+    "MongoDB Expert",
+    "Web Application Development",
+    "JavaScript Specialist",
+    "Express.js Developer",
   ],
-  authors: [{ name: "Mohammad Atikuzzaman", url: "https://yourportfolio.com" }],
+  robots: "index, follow, max-image-preview:large",
   icons: {
     icon: "/icons/profile.png",
-    shortcut: "/icons/favicon.ico",
     apple: "/icons/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Mohammad Atikuzzaman | MERN Stack Developer",
+    type: "website",
+    url: "https://atikuzzaman.dev",
+    title: "Atikuzzaman - Professional MERN Stack Developer",
     description:
-      "Passionate MERN Stack Developer specializing in Next.js, React.js, Node.js, and MongoDB. I build modern web applications.",
-    url: "https://yourportfolio.com",
+      "Full Stack Web Developer specializing in modern JavaScript technologies",
     siteName: "Atikuzzaman Portfolio",
     images: [
       {
-        url: "https://yourportfolio.com/og-image.png",
+        url: "https://atikuzzaman.dev/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Portfolio preview",
+        alt: "Atikuzzaman Portfolio Preview",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@yourTwitterHandle",
-    creator: "@yourTwitterHandle",
-    title: "Mohammad Atikuzzaman | MERN Stack Developer",
+    site: "@yourhandle",
+    creator: "@yourhandle",
+    title: "Atikuzzaman - MERN Stack Developer",
     description:
-      "Passionate MERN Stack Developer specializing in Next.js, React.js, Node.js, and MongoDB.",
-    images: ["https://yourportfolio.com/twitter-preview.png"],
+      "Building modern web applications with cutting-edge technologies",
+    images: ["https://atikuzzaman.vercel.app/atikuzzaman.jpg"],
   },
-  robots: "index, follow",
+  alternates: {
+    canonical: "https://atikuzzaman.vercel.app",
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    other: {
+      "msvalidate.01": "your-bing-verification-code",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -55,14 +64,59 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Atikuzzaman",
+    jobTitle: ["MERN Stack Developer", "Full Stack Developer", "Frontend Developer","React Developer"],
+    url: "https://atikuzzaman.vercel.app",
+    sameAs: [
+      "https://github.com/mohammad-atikuzzaman",
+      "https://www.linkedin.com/in/matikuzzaman",
+      "https://twitter.com/yourprofile",
+    ],
+    skills: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "REST APIs",
+      "Webpack",
+      "Redux",
+      "GraphQL",
+      "AWS",
+      "Docker",
+    ],
+    image: "https://atikuzzaman.dev/images/profile.jpg",
+    description:
+      "Professional MERN Stack Developer with 3+ years of experience in web application development",
+  };
+
   return (
-    <html lang="en">
+    <html lang="en" itemScope itemType="http://schema.org/WebPage">
       <head>
-        <link rel="canonical" href="https://yourportfolio.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
+
       <body className={`${poppins.className} flex flex-col lg:flex-row`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+
         <NavBar />
-        <main>{children}</main>
+
+        <main
+          itemScope
+          itemProp="mainContentOfPage"
+          className="flex-1 overflow-y-auto lg:h-screen"
+        >
+          {children}
+        </main>
       </body>
     </html>
   );

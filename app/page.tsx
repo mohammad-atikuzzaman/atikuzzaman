@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full mx-au">
       <Hero />
-      <section className=" ">
+      <section className="">
         <About />
         <Skills />
         <Projects/>
