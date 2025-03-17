@@ -5,7 +5,13 @@ import ProfileInfo from "./ProfileInfo";
 
 const About: FC = () => {
   return (
-    <div id="about" className="mt-12 space-y-6 px-4 max-w-screen-xl mx-auto">
+    <div
+      id="about"
+      itemScope
+      itemProp="description"
+      aria-label="About Me"
+      className="mt-12 space-y-6 px-4 max-w-screen-xl mx-auto"
+    >
       <Title title="About" />
       <p className="text-lg leading-5 font-light">
         Im a Front End Web developer who is passionate about making{" "}

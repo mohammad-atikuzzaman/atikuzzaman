@@ -19,7 +19,13 @@ import Title from "./reusableComponents/Title";
 
 const Skills = () => {
   return (
-    <section id="skills" className="mt-12 bg-sky-50">
+    <section
+      id="skills"
+      aria-label="Technical Skills"
+      itemScope
+      itemType="https://schema.org/ItemList"
+      className="mt-12 bg-sky-50"
+    >
       <div className="px-4 py-12 max-w-screen-xl mx-auto space-y-8">
         <Title title="Skills" />
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 w-[80%] mx-auto">

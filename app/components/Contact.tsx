@@ -50,7 +50,13 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="bg-sky-50">
+    <div
+      id="contact"
+      aria-label="Contact Information"
+      itemScope
+      itemType="https://schema.org/ContactPoint"
+      className="bg-sky-50"
+    >
       <div className="px-4 py-12 rounded-xl md:flex justify-between gap-8 w-full max-w-screen-xl mx-auto">
         <div className="mb-4 md:w-[30%]">
           <Title title="Contact" />
