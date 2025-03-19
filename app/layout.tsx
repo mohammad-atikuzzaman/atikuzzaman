@@ -50,13 +50,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://atikuzzaman.vercel.app",
   },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    other: {
-      "msvalidate.01": "your-bing-verification-code",
-    },
-  },
 };
 
 export default function RootLayout({
@@ -78,7 +71,7 @@ export default function RootLayout({
     sameAs: [
       "https://github.com/mohammad-atikuzzaman",
       "https://www.linkedin.com/in/matikuzzaman",
-      "https://twitter.com/yourprofile",
+      "https://x.com/m_akash10",
     ],
     skills: [
       "React.js",
