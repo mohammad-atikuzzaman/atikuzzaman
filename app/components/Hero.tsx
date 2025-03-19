@@ -27,17 +27,6 @@ const Hero: FC = () => {
     },
   };
 
-  const buttonVariants = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 120, delay: 1.2 }
-    },
-    hover: { scale: 1.05, backgroundColor: "#0ea5e9" },
-    tap: { scale: 0.95 }
-  };
-
   return (
     <motion.div
       initial="hidden"
@@ -67,19 +56,15 @@ const Hero: FC = () => {
           Im <TypeWriterEffect />
         </motion.p>
 
-        <motion.div
-          variants={buttonVariants}
-          whileHover="hover"
-          whileTap="tap"
-        >
+
           <Link
-            className="inline-block px-4 mt-4 bg-sky-500 md:text-lg lg:text-xl text-white rounded-sm"
+            className="inline-block px-4 mt-4 bg-sky-500 md:text-lg lg:text-xl text-white rounded-sm hover:scale-105"
             href="/Full-Stack-Developer-Atikuzzaman-Resume.pdf"
             target="_blank"
           >
             Resume
           </Link>
-        </motion.div>
+
       </div>
     </motion.div>
   );
