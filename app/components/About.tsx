@@ -14,7 +14,7 @@ const About: FC = () => {
     >
       <Title title="About" />
       <p className="text-lg leading-5 font-light text-gray-700 dark:text-gray-300">
-        I'm a Front End Web developer who is passionate about making{" "}
+        I am a Front End Web developer who is passionate about making{" "}
         <span className="text-sky-500 dark:text-sky-400 underline underline-offset-2">
           error-free websites
         </span>{" "}
