@@ -55,7 +55,7 @@ const Contact = () => {
       aria-label="Contact Information"
       itemScope
       itemType="https://schema.org/ContactPoint"
-      className="bg-sky-50"
+      className="bg-sky-50 dark:bg-gray-800"
     >
       <div className="px-4 py-12 rounded-xl md:flex justify-between gap-8 w-full max-w-screen-xl mx-auto">
         <div className="mb-4 md:w-[30%]">
@@ -75,39 +75,39 @@ const Contact = () => {
         </div>
         <div className="md:w-[70%]">
           <div>
-            <h2 className="text-2xl font-semibold mb-3">Contact Info</h2>
+            <h2 className="text-2xl font-semibold mb-3 dark:text-white">Contact Info</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <ContactInfo
-                icon={<FaMobile />}
+                icon={<FaMobile className="dark:text-blue-300" />}
                 label="Phone_"
                 value="+8801729414662"
                 link="tel:+8801729414662"
               />
               <ContactInfo
-                icon={<FaLocationArrow />}
+                icon={<FaLocationArrow className="dark:text-blue-300" />}
                 label="Location_"
                 value="Pabna, Bangladesh"
               />
               <ContactInfo
-                icon={<FaEnvelope />}
+                icon={<FaEnvelope className="dark:text-blue-300" />}
                 label="Email_"
                 value="akash203037@gmail.com"
                 link="mailto:akash203037@gmail.com"
               />
               <ContactInfo
-                icon={<FaGithub />}
+                icon={<FaGithub className="dark:text-blue-300" />}
                 label="Github_"
                 value="mohammad-atikuzzaman"
                 link="https://github.com/mohammad-atikuzzaman"
               />
               <ContactInfo
-                icon={<FaLinkedin />}
+                icon={<FaLinkedin className="dark:text-blue-300" />}
                 label="LinkedIn"
                 value="matikuzzaman/"
                 link="https://www.linkedin.com/in/matikuzzaman/"
               />
               <ContactInfo
-                icon={<FaFacebook />}
+                icon={<FaFacebook className="dark:text-blue-300" />}
                 label="Facebook"
                 value="mohammadakash20"
                 link="https://www.facebook.com/mohammadakash20"
@@ -115,13 +115,13 @@ const Contact = () => {
             </div>
           </div>
           <br />
-          <hr className="bg-slate-800 border-slate-800" />
+          <hr className="bg-slate-800 border-slate-800 dark:bg-gray-600 dark:border-gray-600" />
           <div>
-            <h2 className="font-semibold text-2xl my-3">Send me Mail</h2>
+            <h2 className="font-semibold text-2xl my-3 dark:text-white">Send me Mail</h2>
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="space-y-3 text-sky-900"
+              className="space-y-3 text-sky-900 dark:text-gray-300"
             >
               <InputField
                 label="Your Name"
@@ -143,7 +143,7 @@ const Contact = () => {
               <input
                 type="submit"
                 value="Send"
-                className=" bg-sky-900 text-white w-full font-bold border-b-sky-700 border-b-[3px] hover:bg-sky-950 transition-all"
+                className="bg-sky-900 dark:bg-blue-700 text-white w-full font-bold border-b-sky-700 dark:border-b-blue-900 border-b-[3px] hover:bg-sky-950 dark:hover:bg-blue-800 transition-all"
               />
             </form>
           </div>
@@ -163,16 +163,16 @@ interface ContactInfoProps {
 }
 
 const ContactInfo = ({ icon, label, value, link }: ContactInfoProps) => (
-  <div className="flex items-center gap-2">
+  <div className="flex items-center gap-2 dark:text-gray-300">
     {icon}
     <div>
-      <p>{label}</p>
+      <p className="dark:text-gray-400">{label}</p>
       {link ? (
-        <a href={link} className="text-sm">
+        <a href={link} className="text-sm dark:text-blue-300 hover:underline">
           {value}
         </a>
       ) : (
-        <h4 className="">{value}</h4>
+        <h4 className="dark:text-white">{value}</h4>
       )}
     </div>
   </div>
@@ -187,13 +187,13 @@ interface InputFieldProps {
 
 const InputField = ({ label, name, type, placeholder }: InputFieldProps) => (
   <div>
-    <label htmlFor={name}>{label}</label>
+    <label htmlFor={name} className="dark:text-gray-300">{label}</label>
     <br />
     <input
       type={type}
       name={name}
       placeholder={placeholder}
-      className="w-full p-2 font-semibold rounded-md border-2 border-sky-900"
+      className="w-full p-2 font-semibold rounded-md border-2 border-sky-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
       required
     />
   </div>
@@ -207,12 +207,12 @@ interface TextareaFieldProps {
 
 const TextareaField = ({ label, name, placeholder }: TextareaFieldProps) => (
   <div>
-    <label htmlFor={name}>{label}</label>
+    <label htmlFor={name} className="dark:text-gray-300">{label}</label>
     <br />
     <textarea
       name={name}
       placeholder={placeholder}
-      className="w-full p-2 font-semibold rounded-md border-2 border-sky-900"
+      className="w-full p-2 font-semibold rounded-md border-2 border-sky-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
       required
     ></textarea>
   </div>

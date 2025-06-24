@@ -12,11 +12,13 @@ import {
   SiMongodb,
   SiMongoose,
   SiNextdotjs,
+  SiRedux,
   SiSocketdotio,
   SiTypescript,
 } from "react-icons/si";
 import "./skillsStyle.css";
 import Title from "./reusableComponents/Title";
+import { GrMysql } from "react-icons/gr";
 
 const Skills = () => {
   return (
@@ -29,7 +31,7 @@ const Skills = () => {
     >
       <div className="px-4 py-12 max-w-screen-xl mx-auto space-y-8">
         <Title title="Skills" />
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 w-[80%] mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 w-[80%] mx-auto">
           {/* All skill items follow this pattern - only dark mode text colors added */}
           <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-[#ff6344] dark:text-blue-300 dark:hover:text-orange-400">
             <FaHtml5 className="text-xl md:text-3xl animate-bounce"></FaHtml5>
@@ -47,7 +49,7 @@ const Skills = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-blue-400 dark:text-blue-300 dark:hover:text-cyan-400">
+          <div className="flex flex-col text-center items-center justify-center text-[#1e4a83] hover:text-blue-400 dark:text-blue-300 dark:hover:text-cyan-400">
             <RiTailwindCssFill className="text-2xl md:text-3xl animate-bounce"></RiTailwindCssFill>
             <div>
               <h4 className="font-semibold md:text-3xl dark:text-white">
@@ -88,6 +90,14 @@ const Skills = () => {
             <div>
               <h4 className="font-semibold md:text-3xl dark:text-white">
                 React JS
+              </h4>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-purple-400 dark:text-blue-300 dark:hover:text-purple-400">
+            <SiRedux className="text-xl md:text-3xl anm"></SiRedux>
+            <div>
+              <h4 className="font-semibold md:text-3xl dark:text-white">
+                Redux
               </h4>
             </div>
           </div>
@@ -137,6 +147,14 @@ const Skills = () => {
             </div>
           </div>
 
+          <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-black dark:text-blue-300 dark:hover:text-gray-300">
+            <GrMysql className="text-xl md:text-3xl animate-pulse"></GrMysql>
+            <div>
+              <h4 className="font-semibold md:text-3xl dark:text-white">
+                MySQL
+              </h4>
+            </div>
+          </div>
           <div className="flex flex-col items-center justify-center text-[#1e4a83] hover:text-black dark:text-blue-300 dark:hover:text-gray-300">
             <SiSocketdotio className="text-xl md:text-3xl animate-pulse"></SiSocketdotio>
             <div>
