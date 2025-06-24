@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description:
     "Professional MERN Stack Developer with expertise in React.js, Node.js, Express.js, and MongoDB. Building high-performance web applications with modern technologies.",
   keywords: [
+    "Atikuzzaman",
+    "Md Atikuzzaman",
+    "Web Developer Atikuzzaman",
+    "Frontend Developer Atikuzzaman",
+    "Full Stack Developer Atikuzzaman",
     "MERN Stack Developer",
     "Full Stack Developer",
     "React Developer",
@@ -74,18 +79,18 @@ export default function RootLayout({
       "https://x.com/m_akash10",
     ],
     skills: [
+      "JavaScript (ES6+)",
+      "TypeScript",
       "React.js",
+      "Redux",
+      "Next JS",
       "Node.js",
       "Express.js",
       "MongoDB",
-      "JavaScript (ES6+)",
-      "TypeScript",
+      "Mongoose",
+      "Socket IO",
       "REST APIs",
-      "Webpack",
-      "Redux",
-      "GraphQL",
-      "AWS",
-      "Docker",
+      ,
     ],
     image: "https://atikuzzaman.vercel.app/photos/profile.png",
     description:
@@ -93,21 +98,44 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" itemScope itemType="http://schema.org/WebPage">
+    <html
+      lang="en"
+      itemScope
+      itemType="http://schema.org/WebPage"
+      suppressHydrationWarning
+    >
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta
+          name="theme-color"
+          content="#ffffff"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#000000"
+          media="(prefers-color-scheme: dark)"
+        />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                document.documentElement.className = theme;
+              })();
+            `,
+          }}
+        />
       </head>
 
-      <body className={`flex flex-col lg:flex-row`}>
+      <body className="flex flex-col lg:flex-row bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
 
         <NavBar />
-
         <main
           itemScope
           itemProp="mainContentOfPage"

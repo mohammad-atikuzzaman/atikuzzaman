@@ -62,6 +62,7 @@ const NavBar: FC = () => {
         <section className="p-6 flex flex-col items-center justify-center">
           <Image
             src="/photos/profile.png"
+            priority={true}
             alt="Atikuzzaman profile photo"
             width={200}
             height={200}
@@ -103,6 +104,7 @@ const NavBar: FC = () => {
       <nav className="lg:hidden flex items-center justify-between bg-[#040B14] bg-opacity-90 shadow shadow-sky-400 px-4 py-3 fixed top-0 w-full z-50">
         <Image
           src="/photos/profile.png"
+          priority={true}
           className="w-11 h-11 rounded-full border-2 border-white shadow"
           alt="Atikuzzaman profile"
           width={40}
@@ -126,6 +128,7 @@ const NavBar: FC = () => {
             <section className="flex flex-col items-center">
               <Image
                 src="/photos/profile.png"
+                priority={true}
                 alt="Atikuzzaman profile"
                 width={150}
                 height={150}
