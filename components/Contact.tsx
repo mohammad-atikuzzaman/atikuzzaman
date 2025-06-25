@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, FormEvent, ReactNode } from "react";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import {
@@ -15,6 +16,29 @@ import Title from "./reusableComponents/Title";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
+
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.1,
+        duration: 1,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1 }
+    }
+  };
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -50,31 +74,24 @@ const Contact = () => {
   };
 
   return (
-    <div
+    <motion.div
       id="contact"
       aria-label="Contact Information"
       itemScope
       itemType="https://schema.org/ContactPoint"
       className="bg-sky-50 dark:bg-gray-800"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ margin: "-100px" }}
+      variants={container}
     >
       <div className="px-4 py-12 rounded-xl md:flex justify-between gap-8 w-full max-w-screen-xl mx-auto">
-        <div className="mb-4 md:w-[30%]">
+        <motion.div className="mb-4 md:w-[30%]" variants={item}>
           <Title title="Contact" />
-          <div id="map">
-            {/* <iframe
-              title="Google Map"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              src={`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Pabna,Bangladesh`}
-            ></iframe> */}
-          </div>
-        </div>
-        <div className="md:w-[70%]">
-          <div>
+        </motion.div>
+
+        <motion.div className="md:w-[70%]" variants={container}>
+          <motion.div variants={item}>
             <h2 className="text-2xl font-semibold mb-3 dark:text-white">Contact Info</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <ContactInfo
@@ -113,10 +130,15 @@ const Contact = () => {
                 link="https://www.facebook.com/mohammadakash20"
               />
             </div>
-          </div>
+          </motion.div>
+
           <br />
-          <hr className="bg-slate-800 border-slate-800 dark:bg-gray-600 dark:border-gray-600" />
-          <div>
+          <motion.hr 
+            className="bg-slate-800 border-slate-800 dark:bg-gray-600 dark:border-gray-600"
+            variants={item}
+          />
+
+          <motion.div variants={item}>
             <h2 className="font-semibold text-2xl my-3 dark:text-white">Send me Mail</h2>
             <form
               ref={form}
@@ -140,16 +162,18 @@ const Contact = () => {
                 name="message"
                 placeholder="Write your message here"
               />
-              <input
+              <motion.input
                 type="submit"
                 value="Send"
-                className="bg-sky-900 dark:bg-blue-700 text-white w-full font-bold border-b-sky-700 dark:border-b-blue-900 border-b-[3px] hover:bg-sky-950 dark:hover:bg-blue-800 transition-all"
+                className="bg-sky-900 dark:bg-blue-700 text-white w-full font-bold border-b-sky-700 dark:border-b-blue-900 border-b-[3px] hover:bg-sky-950 dark:hover:bg-blue-800 transition-all cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               />
             </form>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -163,7 +187,13 @@ interface ContactInfoProps {
 }
 
 const ContactInfo = ({ icon, label, value, link }: ContactInfoProps) => (
-  <div className="flex items-center gap-2 dark:text-gray-300">
+  <motion.div 
+    className="flex items-center gap-2 dark:text-gray-300"
+    initial={{ opacity: 0, x: -10 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ margin: "-50px" }} 
+    transition={{ duration: 0.5 }}
+  >
     {icon}
     <div>
       <p className="dark:text-gray-400">{label}</p>
@@ -175,7 +205,7 @@ const ContactInfo = ({ icon, label, value, link }: ContactInfoProps) => (
         <h4 className="dark:text-white">{value}</h4>
       )}
     </div>
-  </div>
+  </motion.div>
 );
 
 interface InputFieldProps {
@@ -186,7 +216,12 @@ interface InputFieldProps {
 }
 
 const InputField = ({ label, name, type, placeholder }: InputFieldProps) => (
-  <div>
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ margin: "-50px" }} 
+    transition={{ duration: 0.5 }}
+  >
     <label htmlFor={name} className="dark:text-gray-300">{label}</label>
     <br />
     <input
@@ -196,7 +231,7 @@ const InputField = ({ label, name, type, placeholder }: InputFieldProps) => (
       className="w-full p-2 font-semibold rounded-md border-2 border-sky-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
       required
     />
-  </div>
+  </motion.div>
 );
 
 interface TextareaFieldProps {
@@ -206,7 +241,12 @@ interface TextareaFieldProps {
 }
 
 const TextareaField = ({ label, name, placeholder }: TextareaFieldProps) => (
-  <div>
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ margin: "-50px" }} 
+    transition={{ duration: 0.5 }}
+  >
     <label htmlFor={name} className="dark:text-gray-300">{label}</label>
     <br />
     <textarea
@@ -215,5 +255,5 @@ const TextareaField = ({ label, name, placeholder }: TextareaFieldProps) => (
       className="w-full p-2 font-semibold rounded-md border-2 border-sky-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
       required
     ></textarea>
-  </div>
+  </motion.div>
 );

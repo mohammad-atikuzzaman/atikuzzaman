@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ProfileImage from "./atikuzzaman.png";
 import TypeWriterEffect from "../TypeWriterEffect";
+import Link from "next/link";
 
 // Animation variants
 const container = {
@@ -17,67 +18,95 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, x: -50 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-};
-
-const imageAnim = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 20 },
   show: { 
     opacity: 1, 
     y: 0, 
     transition: { 
-      duration: 0.8,
+      duration: 0.5,
       ease: "easeOut"
     } 
   },
 };
 
+const imageAnim = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    },
+  },
+};
+
 const Hero = () => {
   return (
-    <section className="relative bg-[url(/photos/bg.jpg)] w-full min-h-[80vh] bg-cover bg-center bg-no-repeat flex flex-col-reverse md:flex-row justify-between items-center px-4 md:px-8 lg:px-16 overflow-hidden">
-      {/* First Section - Vertically Centered with Animation */}
-      <motion.section 
-        className="text-white z-10 py-8 md:py-0 flex-1 flex flex-col justify-center"
+    <section className="relative bg-[url(/photos/bg.jpg)] dark:bg-[url(/photos/bg-dark.jpg)] w-full min-h-screen md:min-h-[80vh] bg-cover bg-center bg-no-repeat flex flex-col-reverse md:flex-row items-center justify-center md:justify-between px-4 sm:px-8 lg:px-16 overflow-hidden">
+      {/* Content Section - Stacked on mobile, side-by-side on desktop */}
+      <motion.div
+        className="z-10 w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left py-12 md:py-0"
         variants={container}
         initial="hidden"
-        animate="show"
+        whileInView="show"
+        viewport={{ margin: "-100px" }} 
       >
-        <motion.h2 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+        <motion.h1
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white"
           variants={item}
         >
           Md Atikuzzaman
-        </motion.h2>
-        <motion.p 
-          className="text-xl md:text-2xl lg:text-3xl font-medium"
+        </motion.h1>
+        
+        <motion.div 
+          className="text-xl sm:text-2xl md:text-3xl font-medium text-white mb-8 md:mb-12"
           variants={item}
         >
           I am <TypeWriterEffect />
-        </motion.p>
-      </motion.section>
+        </motion.div>
+        
+        {/* Call-to-action buttons */}
+        <motion.div className="flex gap-4" variants={item}>
+          <Link 
+            href="/contacts" 
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all"
+          >
+            Hire Me
+          </Link>
+          <Link 
+            href="/MERN_Stack_developer_Atikuzzaman's_resume.pdf" 
+            target="_blank"
+            className="px-6 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 rounded-lg transition-all"
+          >
+            Download CV
+          </Link>
+        </motion.div>
+      </motion.div>
 
-      {/* Second Section - Bottom Aligned with Animation */}
-      <motion.section 
-        className="relative w-full md:w-auto flex justify-center md:block mt-8 md:mt-0"
+      {/* Image Section - Centered on mobile, aligned bottom on desktop */}
+      <motion.div
+        className="relative w-full md:w-1/2 flex justify-center items-end mt-8 md:mt-0"
         initial="hidden"
-        animate="show"
+        whileInView="show"
+        viewport={{ margin: "-100px" }} 
         variants={imageAnim}
       >
-        <div className="relative h-64 md:h-[80vh] w-64 md:w-auto aspect-square">
+        <div className="relative border-4 border-blue-700 w-64 h-64 sm:w-80 sm:h-80 md:w-full md:h-[70vh] aspect-square">
           <Image
             src={ProfileImage}
             alt="Atikuzzaman"
             fill
-            className="object-contain object-bottom"
+            className="object-contain object-bottom border-4 mt-2 ml-2"
             priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
-      </motion.section>
+      </motion.div>
 
-      {/* Overlay */}
-      <motion.div 
-        className="absolute inset-0 bg-blue-800/10"
+      {/* Gradient Overlay */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-gray-900/30 to-transparent"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}

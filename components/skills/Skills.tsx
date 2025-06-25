@@ -17,8 +17,8 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import "./skillsStyle.css";
-import Title from "./reusableComponents/Title";
 import { GrMysql } from "react-icons/gr";
+import Title from "../reusableComponents/Title";
 
 const Skills = () => {
   return (
