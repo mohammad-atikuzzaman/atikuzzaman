@@ -1,9 +1,9 @@
 "use client"
 import React from "react";
 import { motion } from "framer-motion";
-import TypeWriterEffect from "../TypeWriterEffect";
 import Image from "next/image";
 import ProfileImage from "./atikuzzaman.png";
+import TypeWriterEffect from "../TypeWriterEffect";
 
 // Animation variants
 const container = {
@@ -77,7 +77,7 @@ const Hero = () => {
 
       {/* Overlay */}
       <motion.div 
-        className="absolute inset-0 bg-blue-900/10"
+        className="absolute inset-0 bg-blue-800/10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
