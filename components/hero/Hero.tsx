@@ -69,15 +69,15 @@ const Hero = () => {
         {/* Call-to-action buttons */}
         <motion.div className="flex gap-4" variants={item}>
           <Link 
-            href="/contacts" 
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all"
+            href="/contact" 
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all"
           >
             Hire Me
           </Link>
           <Link 
             href="/MERN_Stack_developer_Atikuzzaman's_resume.pdf" 
             target="_blank"
-            className="px-6 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 rounded-lg transition-all"
+            className="px-6 py-2 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 rounded-lg transition-all"
           >
             Download CV
           </Link>

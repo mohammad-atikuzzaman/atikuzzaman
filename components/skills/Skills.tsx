@@ -27,7 +27,7 @@ const Skills = () => {
       aria-label="Technical Skills"
       itemScope
       itemType="https://schema.org/ItemList"
-      className="mt-12 bg-sky-50 dark:bg-gray-800"
+      className="bg-sky-50 dark:bg-gray-800"
     >
       <div className="px-4 py-12 max-w-screen-xl mx-auto space-y-8">
         <Title title="Skills" />

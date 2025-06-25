@@ -2,12 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { FC, useState, useEffect } from "react";
-import {
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-  FaWhatsapp,
-} from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineContactPhone, MdOutlinePerson } from "react-icons/md";
 import { GoProjectSymlink } from "react-icons/go";
@@ -33,15 +28,15 @@ const social = [
 
 const menus = [
   { nav: "Home", path: "/", icon: <FaHome /> },
-  { nav: "About", path: "#about", icon: <MdOutlinePerson /> },
-  { nav: "Skills", path: "#skills", icon: <GiSkills /> },
-  { nav: "Projects", path: "#projects", icon: <GoProjectSymlink /> },
+  { nav: "About", path: "/about", icon: <MdOutlinePerson /> },
+  { nav: "Skills", path: "/skills", icon: <GiSkills /> },
+  { nav: "Projects", path: "/projects", icon: <GoProjectSymlink /> },
   {
     nav: "Contact",
-    path: "#contact",
+    path: "/contact",
     icon: <MdOutlineContactPhone />,
   },
-]
+];
 
 const NavBar: FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
