@@ -21,16 +21,17 @@ const Projects: FC = () => {
           img="/photos/chatvibe.png"
           github="https://github.com/mohammad-atikuzzaman/-chatvibe"
         />
-        <ThreeDCardDemo
-          title="Mega Newss"
-          description="Article sharing platform"
-          url="https://meganewsss.web.app/"
-          img="/photos/megaNewss.png"
-          github="https://github.com/mohammad-atikuzzaman/mega-news"
+       
+         <ThreeDCardDemo
+          title="CodeAtik Agent"
+          description="Ai powered website builder"
+          url="https://codeatikagent.netlify.app/"
+          img="/photos/codeatik.png"
+          github="https://github.com/mohammad-atikuzzaman/code-atik-frontend"
         />
         <ThreeDCardDemo
-          title="ChatVibe"
-          description="a video conferencing app"
+          title="Vibe Palace"
+          description="Comprehensive room booking platform."
           url="https://vibe-palace.web.app/"
           img="/photos/vibePalace.png"
           github="https://github.com/mohammad-atikuzzaman/vibePalace"
