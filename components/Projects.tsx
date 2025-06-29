@@ -1,6 +1,7 @@
 import ThreeDCardDemo from "@/components/ThreeDCardDemo";
 import React, { FC } from "react";
 import Title from "./reusableComponents/Title";
+import Link from "next/link";
 
 const Projects: FC = () => {
   return (
@@ -9,7 +10,7 @@ const Projects: FC = () => {
       aria-label="Projects Portfolio"
       itemScope
       itemType="https://schema.org/CreativeWork"
-      className="max-w-screen-xl mx-auto mt-12 px-4"
+      className="max-w-screen-xl mx-auto mt-12 px-4 mb-4"
     >
       <Title title="Projects" />
       <p className="mt-8">The Projects Thats I have completed</p>
@@ -37,6 +38,7 @@ const Projects: FC = () => {
           github="https://github.com/mohammad-atikuzzaman/vibePalace"
         />
       </div>
+      <Link className="px-4 py-2 bg-blue-800 text-white font-semibold rounded-md shadow-md" href="/projects"><button>All Projects</button></Link>
     </section>
   );
 };

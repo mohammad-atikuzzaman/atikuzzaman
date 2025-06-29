@@ -43,6 +43,13 @@ const page = () => {
           github="https://github.com/mohammad-atikuzzaman/faridpurbloodnetwork"
         />
         <ThreeDCardDemo
+          title="Dream Event"
+          description="A comprehensive event booking platform"
+          url="https://dream-event.netlify.app/"
+          img="/photos/dreamevent.png"
+          github="https://github.com/mohammad-atikuzzaman/dream-event-client"
+        />
+        <ThreeDCardDemo
           title="Mega Newss"
           description="Article sharing platform"
           url="https://meganewsss.web.app/"
