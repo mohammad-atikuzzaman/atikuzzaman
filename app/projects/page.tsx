@@ -29,11 +29,18 @@ const page = () => {
           github="https://github.com/mohammad-atikuzzaman/code-atik-frontend"
         />
         <ThreeDCardDemo
-          title="ChatVibe"
-          description="a video conferencing app"
-          url="https://chat-vibe-ashy.vercel.app/"
-          img="/photos/chatvibe.png"
-          github="https://github.com/mohammad-atikuzzaman/-chatvibe"
+          title="ArmyCamp Location"
+          description="Emergency contacts and location of bd army."
+          url="https://armycamplocation.netlify.app/"
+          img="/photos/armycamp.png"
+          github="https://github.com/mohammad-atikuzzaman/armycamplocation"
+        />
+        <ThreeDCardDemo
+          title="FBN Pabna"
+          description="Blood Donation network site for local area."
+          url="https://fbn-pabna.netlify.app/ "
+          img="/photos/fbnpabna.png"
+          github="https://github.com/mohammad-atikuzzaman/faridpurbloodnetwork"
         />
         <ThreeDCardDemo
           title="Mega Newss"
