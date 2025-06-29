@@ -43,7 +43,7 @@ const imageAnim = {
 
 const Hero = () => {
   return (
-    <section className="relative bg-[url(/photos/bg.jpg)] w-full min-h-screen md:min-h-[80vh] bg-cover bg-center bg-no-repeat flex flex-col-reverse md:flex-row items-center justify-center md:justify-between px-4 sm:px-8 lg:px-16 overflow-hidden">
+    <section className="relative bg-[url(/photos/bg.jpg)] w-full min-h-screen bg-cover bg-center bg-no-repeat flex flex-col-reverse md:flex-row items-center justify-center md:justify-between px-4 sm:px-8 lg:px-16 overflow-hidden">
       {/* Content Section - Stacked on mobile, side-by-side on desktop */}
       <motion.div
         className="z-10 w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left py-12 md:py-0"
