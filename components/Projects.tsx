@@ -38,7 +38,7 @@ const Projects: FC = () => {
           github="https://github.com/mohammad-atikuzzaman/vibePalace"
         />
       </div>
-      <Link className="px-4 py-2 bg-blue-800 text-white font-semibold rounded-md shadow-md" href="/projects"><button>All Projects</button></Link>
+      <Link className="px-4 py-2 bg-blue-800 text-white font-semibold rounded-md shadow-md " href="/projects"><button>All Projects... </button ></Link>
     </section>
   );
 };
