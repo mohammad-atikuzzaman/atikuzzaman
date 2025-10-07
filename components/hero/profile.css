@@ -1,0 +1,80 @@
+.profile {
+  background: linear-gradient(135deg, #3734a3, #2563eb, #7e3edf); /* indigo-900 → blue-800 → purple-900 */
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  box-shadow: 0px 23px 25px -7px rgba(53, 171, 240, 0.5); /* soft blue glow */
+  background-size: cover;
+  background-position: center;
+  animation: morph 5s ease-in-out infinite;
+  transition: all 0.6s ease-in-out;
+  border: 2px solid rgba(139, 92, 246, 0.5); /* subtle purple border */
+}
+
+.profile:hover {
+  background: linear-gradient(135deg, #4338ca, #2563eb, #7e22ce);
+  transform: scale(1.05);
+  box-shadow: 0px 25px 30px -10px rgba(56, 189, 248, 0.7); /* blue hover glow */
+}
+
+/* Morphing blob effect */
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+/* Smooth spinning */
+.anm {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Stretching pulse */
+.anmstretching {
+  animation: stretch 2s infinite ease-in-out;
+}
+
+@keyframes stretch {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 0.8);
+  }
+}
+
+/* Shake animation */
+.shake {
+  animation: shake 1.5s infinite ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0) rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px) rotate(-5deg); }
+  20%, 40%, 60%, 80% { transform: translateX(5px) rotate(5deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+/* Optional: dark mode support */
+@media (prefers-color-scheme: dark) {
+  .profile {
+    background: linear-gradient(135deg, #1e2f57, #21439e, #2c276e);
+    box-shadow: 0px 20px 25px -5px rgba(59, 130, 246, 0.4);
+  }
+  .profile:hover {
+    background: linear-gradient(135deg, #312e81, #2563eb, #4c1d95);
+    box-shadow: 0px 25px 30px -10px rgba(129, 140, 248, 0.7);
+  }
+}

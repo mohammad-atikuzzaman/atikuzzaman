@@ -1,13 +1,10 @@
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { BsFillHddStackFill } from "react-icons/bs";
-import { FaPhoneAlt } from "react-icons/fa";
 import { FaDiscourse, FaGraduationCap, FaTreeCity } from "react-icons/fa6";
 import { GrStatusGood } from "react-icons/gr";
 import { IoIosCalendar } from "react-icons/io";
 import { IoLanguage } from "react-icons/io5";
 import { LuUniversity } from "react-icons/lu";
-import { MdOutlineAttachEmail } from "react-icons/md";
 
 const ProfileInfo = () => {
   // Animation variants
@@ -17,40 +14,40 @@ const ProfileInfo = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-      }
-    }
+      },
+    },
   };
 
   const item = {
     hidden: { opacity: 0, y: 10 },
-    show: { 
-      opacity: 1, 
+    show: {
+      opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         type: "spring",
         stiffness: 100,
         damping: 10,
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
-    <motion.div 
-      className="max-w-3xl mx-auto px-6 text-gray-800 dark:text-gray-200"
+    <motion.div
+      className="max-w-3xl mx-auto text-gray-800 dark:text-gray-200"
       initial="hidden"
       whileInView="show"
-      viewport={{ margin: "-50px" }}
+      viewport={{ once: true, margin: "-50px" }}
       variants={container}
     >
-      <motion.h2 
-        className="text-2xl font-bold dark:text-white"
+      <motion.h2
+        className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400"
         variants={item}
       >
         Full Stack Web Developer.
       </motion.h2>
-      
-      <motion.p 
+
+      <motion.p
         className="italic text-gray-600 dark:text-gray-400 mt-2"
         variants={item}
       >
@@ -59,81 +56,125 @@ const ProfileInfo = () => {
         scalable web applications.
       </motion.p>
 
-      <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4"
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ margin: "-50px" }}
-      >
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <IoIosCalendar className="text-blue-500 dark:text-blue-400" /> 
-          <b>Birthday:</b> 10 November 2001
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <BsFillHddStackFill className="text-blue-500 dark:text-blue-400" /> 
-          <b>Stack:</b> MERN
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <LuUniversity className="text-blue-500 dark:text-blue-400" /> 
-          <b>University:</b> National University Bangladesh
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <FaGraduationCap className="text-blue-500 dark:text-blue-400" /> 
-          <b>Study:</b> BBA {"(management)"}
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <FaPhoneAlt className="text-blue-500 dark:text-blue-400" /> 
-          <b>Phone:</b> +8801729414662
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <MdOutlineAttachEmail className="text-blue-500 dark:text-blue-400" /> 
-          <b>Email:</b> akash203037@gmail.com
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <FaTreeCity className="text-blue-500 dark:text-blue-400" /> 
-          <b>Address:</b> Pabna, Bangladesh
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <GrStatusGood className="text-blue-500 dark:text-blue-400" /> 
-          <b>Availability:</b> Open for work
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <FaDiscourse className="text-blue-500 dark:text-blue-400" /> 
-          <b>Courses:</b>{" "}
-          <Link 
-            title="certificate of atikuzzaman" 
-            target="_blank"
-            href="https://drive.google.com/file/d/1gCsI95gnRjqzbiHbSD3hgW3-CbiupbmT/view?usp=drive_link"
-            className="text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            Complete Web Development
-          </Link>
-        </motion.p>
-        
-        <motion.p className="flex items-center gap-2" variants={item}>
-          <IoLanguage className="text-blue-500 dark:text-blue-400" /> 
-          <b>Language:</b> Bangla, English
-        </motion.p>
-      </motion.div>
-      
-      <motion.p 
-        className="mt-6 text-gray-700 dark:text-gray-300"
-        variants={item}
-      >
-        I am a passionate MERN Stack developer skilled in MongoDB, Express.js,
-        React.js, and Node.js. I build scalable, dynamic web applications,
-        ensuring high performance, responsiveness, and seamless user experiences
-        with modern JavaScript technologies.
-      </motion.p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        {/* Personal Info */}
+
+        <motion.div
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-300"
+          variants={item}
+          whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+        >
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-md">
+            <BsFillHddStackFill className="text-white text-lg" />
+          </div>
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+              Stack
+            </h3>
+            <p className="text-base font-semibold">MERN</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-300"
+          variants={item}
+          whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+        >
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-md">
+            <FaDiscourse className="text-white text-lg" />
+          </div>
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+              Freelance
+            </h3>
+            <p className="text-base font-semibold flex items-center gap-1">
+              Available <GrStatusGood className="text-green-500" />
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-300"
+          variants={item}
+          whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+        >
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-md">
+            <LuUniversity className="text-white text-lg" />
+          </div>
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+              University
+            </h3>
+            <p className="text-base font-semibold">
+              National University Bangladesh
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-300"
+          variants={item}
+          whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+        >
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-md">
+            <FaGraduationCap className="text-white text-lg" />
+          </div>
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+              Degree
+            </h3>
+            <p className="text-base font-semibold">BBA (Management)</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-300"
+          variants={item}
+          whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+        >
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-md">
+            <IoLanguage className="text-white text-lg" />
+          </div>
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+              Languages
+            </h3>
+            <p className="text-base font-semibold">Bangla, English</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-300"
+          variants={item}
+          whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+        >
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-md">
+            <IoIosCalendar className="text-white text-lg" />
+          </div>
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+              Date of Birth
+            </h3>
+            <p className="text-base font-semibold">November 10, 2001</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="flex items-center gap-4 p-3 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors duration-300"
+          variants={item}
+          whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+        >
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-md">
+            <FaTreeCity className="text-white text-lg" />
+          </div>
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+              Address
+            </h3>
+            <p className="text-base font-semibold">Pabna, Bangladesh</p>
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

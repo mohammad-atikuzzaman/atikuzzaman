@@ -77,54 +77,69 @@ const Contact = () => {
     <motion.div
       id="contact"
       aria-label="Contact Information"
-      itemScope
-      itemType="https://schema.org/ContactPoint"
-      className="bg-sky-50 dark:bg-gray-800"
+
+      className="relative bg-gradient-to-b from-sky-50 to-white dark:from-gray-800 dark:to-gray-900 py-16 overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ margin: "-100px" }}
       variants={container}
     >
-      <div className="px-4 py-12 rounded-xl md:flex justify-between gap-8 w-full max-w-screen-xl mx-auto">
-        <motion.div className="mb-4 md:w-[30%]" variants={item}>
+
+      <div className="px-4 py-12 rounded-xl  gap-8 w-full max-w-screen-xl mx-auto">
+        <motion.div className="mb-4 text-center" variants={item}>
           <Title title="Contact" />
+          <motion.p 
+            className="text-gray-600 dark:text-gray-300 mt-4 mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            Get in touch with me. Im always ready to discuss your project and explore new opportunities.
+          </motion.p>
         </motion.div>
 
-        <motion.div className="md:w-[70%]" variants={container}>
-          <motion.div variants={item}>
-            <h2 className="text-2xl font-semibold mb-3 dark:text-white">Contact Info</h2>
-            <div className="grid md:grid-cols-2 gap-4">
+        <motion.div className="" variants={container}>
+          <motion.div 
+            variants={item}
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 mb-8 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
+          >
+            <h2 className="text-2xl font-semibold mb-5 text-gray-800 dark:text-white border-b pb-2 border-gray-200 dark:border-gray-700">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Contact Info
+              </span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
               <ContactInfo
-                icon={<FaMobile className="dark:text-blue-300" />}
-                label="Phone_"
+                icon={<FaMobile className="text-blue-500 dark:text-blue-400 text-xl" />}
+                label="Phone"
                 value="+8801729414662"
                 link="tel:+8801729414662"
               />
               <ContactInfo
-                icon={<FaLocationArrow className="dark:text-blue-300" />}
-                label="Location_"
+                icon={<FaLocationArrow className="text-green-500 dark:text-green-400 text-xl" />}
+                label="Location"
                 value="Pabna, Bangladesh"
               />
               <ContactInfo
-                icon={<FaEnvelope className="dark:text-blue-300" />}
-                label="Email_"
+                icon={<FaEnvelope className="text-red-500 dark:text-red-400 text-xl" />}
+                label="Email"
                 value="akash203037@gmail.com"
                 link="mailto:akash203037@gmail.com"
               />
               <ContactInfo
-                icon={<FaGithub className="dark:text-blue-300" />}
-                label="Github_"
+                icon={<FaGithub className="text-gray-700 dark:text-gray-300 text-xl" />}
+                label="Github"
                 value="mohammad-atikuzzaman"
                 link="https://github.com/mohammad-atikuzzaman"
               />
               <ContactInfo
-                icon={<FaLinkedin className="dark:text-blue-300" />}
+                icon={<FaLinkedin className="text-blue-600 dark:text-blue-500 text-xl" />}
                 label="LinkedIn"
                 value="matikuzzaman/"
                 link="https://www.linkedin.com/in/matikuzzaman/"
               />
               <ContactInfo
-                icon={<FaFacebook className="dark:text-blue-300" />}
+                icon={<FaFacebook className="text-blue-700 dark:text-blue-600 text-xl" />}
                 label="Facebook"
                 value="mohammadakash20"
                 link="https://www.facebook.com/mohammadakash20"
@@ -132,43 +147,47 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <br />
-          <motion.hr 
-            className="bg-slate-800 border-slate-800 dark:bg-gray-600 dark:border-gray-600"
+          <motion.div 
             variants={item}
-          />
-
-          <motion.div variants={item}>
-            <h2 className="font-semibold text-2xl my-3 dark:text-white">Send me Mail</h2>
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300"
+          >
+            <h2 className="text-2xl font-semibold mb-5 text-gray-800 dark:text-white border-b pb-2 border-gray-200 dark:border-gray-700">
+              <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                Send me a Message
+              </span>
+            </h2>
             <form
               ref={form}
               onSubmit={sendEmail}
-              className="space-y-3 text-sky-900 dark:text-gray-300"
+              className="space-y-5 text-sky-900 dark:text-gray-300"
             >
-              <InputField
-                label="Your Name"
-                name="from_name"
-                type="text"
-                placeholder="John Doe"
-              />
-              <InputField
-                label="Your Email"
-                name="from_email"
-                type="email"
-                placeholder="test@test.com"
-              />
+              <div className="grid md:grid-cols-2 gap-5">
+                <InputField
+                  label="Your Name"
+                  name="from_name"
+                  type="text"
+                  placeholder="John Doe"
+                />
+                <InputField
+                  label="Your Email"
+                  name="from_email"
+                  type="email"
+                  placeholder="test@test.com"
+                />
+              </div>
               <TextareaField
                 label="Your Message"
                 name="message"
                 placeholder="Write your message here"
               />
-              <motion.input
+              <motion.button
                 type="submit"
-                value="Send"
-                className="bg-sky-900 dark:bg-blue-700 text-white w-full font-bold border-b-sky-700 dark:border-b-blue-900 border-b-[3px] hover:bg-sky-950 dark:hover:bg-blue-800 transition-all cursor-pointer"
-                whileHover={{ scale: 1.02 }}
+                className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full"
+                whileHover={{ scale: 1.02, boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" }}
                 whileTap={{ scale: 0.98 }}
-              />
+              >
+                Send Message
+              </motion.button>
             </form>
           </motion.div>
         </motion.div>

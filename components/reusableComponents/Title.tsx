@@ -6,7 +6,7 @@ interface TitlePorps {
 
 const Title: FC<TitlePorps> = ({ title }) => {
   return (
-    <h2 className="font-semibold text-4xl underline underline-offset-[14px] decoration-sky-500">
+    <h2 className="font-semibold text-4xl underline underline-offset-[14px] decoration-sky-500 uppercase">
       {title}
     </h2>
   );

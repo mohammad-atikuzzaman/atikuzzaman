@@ -1,5 +1,4 @@
-import Skills from "@/components/skills/Skills";
-import React from "react";
+import Skills from "@/components/Skills";
 
 const page = () => {
   return <Skills />;

@@ -1,28 +1,40 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import NavBar from "../components/NavBar";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title:
     "Atikuzzaman | MERN Stack Developer | Full Stack Engineer | React & Node.js Expert",
   description:
-    "Professional MERN Stack Developer with expertise in React.js, Node.js, Express.js, and MongoDB. Building high-performance web applications with modern technologies.",
+    "Professional MERN Stack Developer specialized in React.js, Node.js, Express.js, and MongoDB. Building high-performance web applications using modern technologies.",
   keywords: [
     "Atikuzzaman",
     "Md Atikuzzaman",
+    "Mohammad Atikuzzaman",
     "Web Developer Atikuzzaman",
     "Frontend Developer Atikuzzaman",
     "Full Stack Developer Atikuzzaman",
+    "MERN Stack Developer Atikuzzaman",
     "MERN Stack Developer",
     "Full Stack Developer",
     "React Developer",
     "Node.js Developer",
     "MongoDB Expert",
     "Web Application Development",
-    "JavaScript Specialist",
+    "JavaScript Expert",
     "Express.js Developer",
+    "Bangladeshi Web Developer",
+    "Pabna Web Developer",
+    "Freelance Developer",
+    "Remote Web Developer",
   ],
-  robots: "index, follow, max-image-preview:large",
+  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   icons: {
     icon: "/icons/favicon.png",
     apple: "/icons/favicon.png",
@@ -32,7 +44,7 @@ export const metadata: Metadata = {
     url: "https://atikuzzaman.vercel.app",
     title: "Atikuzzaman - Professional MERN Stack Developer",
     description:
-      "Full Stack Web Developer specializing in modern JavaScript technologies",
+      "Full Stack Web Developer specialized in modern JavaScript technologies",
     siteName: "Atikuzzaman Portfolio",
     images: [
       {
@@ -42,19 +54,38 @@ export const metadata: Metadata = {
         alt: "Atikuzzaman Portfolio Preview",
       },
     ],
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@yourhandle",
-    creator: "@yourhandle",
+    site: "@m_akash10",
+    creator: "@m_akash10",
     title: "Atikuzzaman - MERN Stack Developer",
     description:
-      "Building modern web applications with cutting-edge technologies",
+      "Building advanced web applications using modern technologies",
     images: ["https://atikuzzaman.vercel.app/photos/atikuzzaman.png"],
   },
   alternates: {
     canonical: "https://atikuzzaman.vercel.app",
+    languages: {
+      'en-US': 'https://atikuzzaman.vercel.app',
+    },
   },
+  authors: [{ name: "Mohammad Atikuzzaman", url: "https://atikuzzaman.vercel.app" }],
+  creator: "Mohammad Atikuzzaman",
+  publisher: "Mohammad Atikuzzaman",
+  formatDetection: {
+    telephone: true,
+    date: true,
+    address: true,
+    email: true,
+    url: true,
+  },
+  metadataBase: new URL("https://atikuzzaman.vercel.app"),
+  verification: {
+    google: "google-site-verification-code", // আপনার Google Search Console কোড যোগ করুন
+  },
+  category: "portfolio",
 };
 
 export default function RootLayout({
@@ -66,6 +97,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Atikuzzaman",
+    alternateName: "Mohammad Atikuzzaman",
+    givenName: "Atikuzzaman",
+    familyName: "Mohammad",
     jobTitle: [
       "MERN Stack Developer",
       "Full Stack Developer",
@@ -77,24 +111,48 @@ export default function RootLayout({
       "https://github.com/mohammad-atikuzzaman",
       "https://www.linkedin.com/in/matikuzzaman",
       "https://x.com/m_akash10",
+      "https://www.facebook.com/mohammadakash20"
     ],
     skills: [
       "JavaScript (ES6+)",
       "TypeScript",
       "React.js",
       "Redux",
-      "Next JS",
+      "Next.js",
       "Node.js",
       "Express.js",
       "MongoDB",
       "Mongoose",
-      "Socket IO",
+      "Socket.IO",
       "REST APIs",
-      ,
+      "Tailwind CSS",
+      "Material UI"
     ],
     image: "https://atikuzzaman.vercel.app/photos/profile.png",
-    description:
-      "Professional MERN Stack Developer with 3+ years of experience in web application development",
+    description: "Professional MERN Stack Developer with 3+ years of web application development experience",
+    nationality: "Bangladeshi",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Pabna",
+      addressRegion: "Rajshahi",
+      addressCountry: "Bangladesh"
+    },
+    email: "akash203037@gmail.com",
+    telephone: "+8801729414662",
+    knowsLanguage: ["Bengali", "English"],
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Pabna University of Science and Technology",
+      sameAs: "https://www.pust.ac.bd/"
+    },
+    workLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Pabna",
+        addressCountry: "Bangladesh"
+      }
+    }
   };
 
   return (
