@@ -57,22 +57,10 @@ const About: FC = () => {
         className=" my-8 p-8 bg-white dark:bg-gray-800 rounded-xl shadow-xl dark:shadow-blue-900/20"
         variants={item}
       >
-        <p className=" font-light text-gray-700 dark:text-gray-200 pl-4 border-l-4 border-indigo-500">
-          Im Atikuzzaman, a professional MERN Stack Developer with over 2 years
-          of experience. I build modern web applications using React.js,
-          Next.js, Node.js, Express.js, and MongoDB. I am passionate about
-          making{" "}
-          <span className="text-indigo-600 dark:text-indigo-400 font-medium">
-            error-free websites
-          </span>{" "}
-          with 100% client satisfaction. I love to solve real-world problems and
-          am{" "}
-          <span className="text-indigo-600 dark:text-indigo-400 font-medium">
-            strategic and goal-oriented
-          </span>
-          , always working with an end goal in mind. I pride myself on doing
-          quality work and maintaining excellent communication.
-        </p>
+        <p className="font-light text-gray-700 dark:text-gray-200 pl-4 border-l-4 border-indigo-500">
+  Turning ideas into powerful digital experiences — I'm <span className="font-medium text-indigo-600 dark:text-indigo-400">Atikuzzaman</span>, a MERN Stack Developer dedicated to building modern, scalable, and high-performing web applications that help businesses grow with clarity and confidence.
+</p>
+
       </motion.div>
 
       <div className="flex flex-col lg:flex-row items-stretch gap-10 bg-white/50 dark:bg-gray-900/50  sm:p-10 rounded-2xl backdrop-blur-sm">
