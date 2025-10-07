@@ -101,7 +101,7 @@ const NavBar: FC = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="lg:hidden flex items-center justify-between bg-gradient-to-r from-indigo-900 to-purple-900 bg-opacity-95 backdrop-blur-sm shadow-lg px-4 py-3 fixed top-0 w-full z-50">
+      <nav className="lg:hidden flex items-center justify-between bg-gradient-to-r from-indigo-800 via-purple-950 to-blue-800 bg-opacity-95 backdrop-blur-sm shadow-lg px-4 py-3 fixed top-0 w-full z-50">
         <Image
           src="/photos/profile.png"
           priority={true}
@@ -164,7 +164,7 @@ const NavBar: FC = () => {
                 key={index}
                 target="_blank"
                 href={item.href}
-                className="bg-gray-800 p-2 rounded-full hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 transform hover:scale-110 transition-all duration-300"
+                className="bg-gray-800 text-white text-xl p-2 rounded-full hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 transform hover:scale-110 transition-all duration-300"
               >
                 {item.icon}
               </Link>
