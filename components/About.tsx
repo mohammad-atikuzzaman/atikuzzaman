@@ -58,7 +58,7 @@ const About: FC = () => {
         variants={item}
       >
         <p className="font-light text-gray-700 dark:text-gray-200 pl-4 border-l-4 border-indigo-500">
-  Turning ideas into powerful digital experiences — I'm <span className="font-medium text-indigo-600 dark:text-indigo-400">Atikuzzaman</span>, a MERN Stack Developer dedicated to building modern, scalable, and high-performing web applications that help businesses grow with clarity and confidence.
+  Turning ideas into powerful digital experiences — Im <span className="font-medium text-indigo-600 dark:text-indigo-400">Atikuzzaman</span>, a MERN Stack Developer dedicated to building modern, scalable, and high-performing web applications that help businesses grow with clarity and confidence.
 </p>
 
       </motion.div>
