@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import NavBar from "../components/NavBar";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -201,6 +202,7 @@ export default function RootLayout({
         >
           {children}
         </main>
+        <SpeedInsights/>
       </body>
     </html>
   );
