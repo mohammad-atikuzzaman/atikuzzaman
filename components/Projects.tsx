@@ -54,7 +54,7 @@ const Projects: FC = () => {
       </motion.p>
 
       <motion.div
-        className="grid md:grid-cols-2 gap-8 pt-12"
+        className="grid md:grid-cols-2 gap-8 pt-12 text-left"
         variants={container}
         initial="hidden"
         whileInView="show"
