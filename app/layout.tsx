@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import NavBar from "../components/NavBar";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -35,7 +36,8 @@ export const metadata: Metadata = {
     "Freelance Developer",
     "Remote Web Developer",
   ],
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  robots:
+    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   icons: {
     icon: "/icons/favicon.png",
     apple: "/icons/favicon.png",
@@ -62,17 +64,18 @@ export const metadata: Metadata = {
     site: "@m_akash10",
     creator: "@m_akash10",
     title: "Atikuzzaman - MERN Stack Developer",
-    description:
-      "Building advanced web applications using modern technologies",
+    description: "Building advanced web applications using modern technologies",
     images: ["https://atikuzzaman.vercel.app/photos/atikuzzaman.png"],
   },
   alternates: {
     canonical: "https://atikuzzaman.vercel.app",
     languages: {
-      'en-US': 'https://atikuzzaman.vercel.app',
+      "en-US": "https://atikuzzaman.vercel.app",
     },
   },
-  authors: [{ name: "Mohammad Atikuzzaman", url: "https://atikuzzaman.vercel.app" }],
+  authors: [
+    { name: "Mohammad Atikuzzaman", url: "https://atikuzzaman.vercel.app" },
+  ],
   creator: "Mohammad Atikuzzaman",
   publisher: "Mohammad Atikuzzaman",
   formatDetection: {
@@ -112,7 +115,7 @@ export default function RootLayout({
       "https://github.com/mohammad-atikuzzaman",
       "https://www.linkedin.com/in/matikuzzaman",
       "https://x.com/m_akash10",
-      "https://www.facebook.com/mohammadakash20"
+      "https://www.facebook.com/mohammadakash20",
     ],
     skills: [
       "JavaScript (ES6+)",
@@ -127,16 +130,17 @@ export default function RootLayout({
       "Socket.IO",
       "REST APIs",
       "Tailwind CSS",
-      "Material UI"
+      "Material UI",
     ],
     image: "https://atikuzzaman.vercel.app/photos/profile.png",
-    description: "Professional MERN Stack Developer with 3+ years of web application development experience",
+    description:
+      "Professional MERN Stack Developer with 3+ years of web application development experience",
     nationality: "Bangladeshi",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Pabna",
       addressRegion: "Rajshahi",
-      addressCountry: "Bangladesh"
+      addressCountry: "Bangladesh",
     },
     email: "akash203037@gmail.com",
     telephone: "+8801729414662",
@@ -144,16 +148,16 @@ export default function RootLayout({
     alumniOf: {
       "@type": "EducationalOrganization",
       name: "Pabna University of Science and Technology",
-      sameAs: "https://www.pust.ac.bd/"
+      sameAs: "https://www.pust.ac.bd/",
     },
     workLocation: {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Pabna",
-        addressCountry: "Bangladesh"
-      }
-    }
+        addressCountry: "Bangladesh",
+      },
+    },
   };
 
   return (
@@ -202,7 +206,8 @@ export default function RootLayout({
         >
           {children}
         </main>
-        <SpeedInsights/>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
